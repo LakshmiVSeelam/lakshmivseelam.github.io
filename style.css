@@ -1,4 +1,4 @@
-@import './node_modules/bootstrap/dist/css/bootstrap.min.css';
+/* @import './node_modules/bootstrap/dist/css/bootstrap.min.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 body {
@@ -8,4 +8,11 @@ body {
 .background {
     background: url('https://lh3.googleusercontent.com/wfLObCRX1zAmUxb_qGXz2mvClvgQtNAOj95O63Z1PCxad3VXgX7cnjyuo0ueoRAEfiz6Zb7JGgYMoPlVBCiaDL2rQYrri9qna-ihflZMwsEpJNuakPMYDeQiY8cGN-0bY0kzVz2qGQ=w2400');
     background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    .background {
+        background-position: 25% 20%;
+        background-size: auto;
+    }
 }
