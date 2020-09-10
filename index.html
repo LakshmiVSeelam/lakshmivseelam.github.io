@@ -5,29 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
+    <script src="https://kit.fontawesome.com/999af086c4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="//cdn.materialdesignicons.com/5.5.55/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 
-<body class="background">
-    <div class="vh-100">
+<body class="">
+    <div class="position-fixed w-100">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent" id="main-nav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-white" href="#home_section">Home</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-white" href="#bio_section">Bio</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-white" href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="vh-100 solid-background" id="home_section">
+
         <div class="container h-100">
+
             <div class="text-right d-flex align-items-center h-100 justify-content-end">
                 <div class="d-flex flex-column">
                     <h1>hi !!!</h1>
                     <h2>I'm <span class="display-2 ml-2">Lakshmi</span></h2>
                     <h4>Full Stack Developer</h4>
+                    <div class="">
+                        <ul class="list-group list-group-horizontal justify-content-end">
+                            <li class="list-group-item p-2 bg-transparent border-0">
+                                <a class="text-dark" target="_blank" href="https://www.linkedin.com/in/lakshmiseelam/">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="list-group-item p-2 bg-transparent border-0">
+                                <a class="text-dark" target="_blank" href="https://www.linkedin.com/in/lakshmiseelam/">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-group-item p-2 bg-transparent border-0">
+                                <a class="text-dark" target="_blank" href="https://www.linkedin.com/in/lakshmiseelam/">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
 
+        </div>
+    </div>
+    <div class="vh-100 py-3" id="bio_section">
+
+        <div class="container h-100">
+            <h3 class="mt-3">My Journey till ...</h3>
+
+
+        </div>
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.0.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
@@ -35,6 +80,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+
+    <script src="js/common.js"></script>
 
 </body>
 
