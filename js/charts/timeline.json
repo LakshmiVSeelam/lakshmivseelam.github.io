@@ -1,0 +1,315 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "autosize": "fit-y",
+    "padding": 10,
+    "width": 600,
+    "height": 200,
+    "data": [{
+        "name": "data",
+        "values": null,
+        "format": {
+            "parse": {
+                "toDate": "date",
+                "fromDate": "date"
+            }
+        },
+        "transform": [{
+                "type": "extent",
+                "field": "age",
+                "signal": "minMaxAge"
+            },
+            {
+                "type": "identifier",
+                "as": "id"
+            }
+        ]
+    }],
+    "signals": [{
+        "name": "indexDate",
+        "value": null,
+        "on": [{
+                "events": "mousemove",
+                "update": "(invert('xscale', clamp(x(), 0, width)))"
+            },
+            {
+                "events": "mouseout",
+                "update": "null"
+            }
+        ]
+    }],
+    "scales": [{
+            "name": "xscale",
+            "type": "band",
+            "domain": {
+                "data": "data",
+                "field": "toDate"
+            },
+            "range": "width"
+        },
+        {
+            "name": "circle_colors",
+            "type": "linear",
+            "domain": {
+                "data": "data",
+                "field": "toDate"
+            },
+            "range": {
+                "scheme": "greenblue"
+            }
+        }
+    ],
+
+    "marks": [{
+            "type": "rule",
+            "name": "pointers",
+            "from": {
+                "data": "data"
+            },
+            "encode": {
+                "update": {
+                    "x": {
+                        "scale": "xscale",
+                        "field": "toDate",
+                        "band": 0.5
+                    },
+                    "x2": {
+                        "scale": "xscale",
+                        "field": "toDate",
+                        "band": 0.5
+                    },
+                    "y2": {
+                        "signal": "datum.id % 2 == 0 ? height * 0.65 : height/2"
+                    },
+                    "y": {
+                        "signal": "datum.id % 2 != 0 ? height * 0.35 : height/2"
+                    },
+                    "stroke": {
+                        "scale": "circle_colors",
+                        "field": "toDate"
+                    },
+                    "strokeWidth": {
+                        "value": 3
+                    }
+                }
+            }
+        },
+        {
+            "type": "rule",
+            "name": "midLine",
+            "encode": {
+                "update": {
+                    "x": {
+                        "value": 0
+                    },
+                    "x2": {
+                        "signal": "width"
+                    },
+                    "y": {
+                        "signal": "height/2"
+                    },
+                    "y2": {
+                        "signal": "height/2"
+                    },
+                    "stroke": {
+                        "value": "#ccc"
+                    }
+                }
+            }
+        },
+        {
+            "type": "text",
+            "from": {
+                "data": "data"
+            },
+            "encode": {
+                "update": {
+                    "text": {
+                        "signal": "datum.desc"
+                    },
+                    "x": {
+                        "scale": "xscale",
+                        "field": "toDate",
+                        "band": 0.5
+                    },
+                    "dy": {
+                        "signal": "datum.id % 2 == 0 ? height/3.5 : - height/3.5"
+                    },
+                    "y": {
+                        "signal": "height/2"
+                    },
+                    "fontSize": {
+                        "value": 15
+                    },
+                    "align": {
+                        "value": "center"
+                    },
+                    "lineBreak": {
+                        "value": "*"
+                    },
+                    "baseline": {
+                        "value": "bottom"
+                    },
+                    "tooltip": {
+                        "signal": "datum"
+                    },
+                    "font": {
+                        "value": "Quicksand"
+                    },
+                    "fontWeight": {
+                        "value": 500
+                    }
+                }
+            }
+        },
+        {
+            "type": "symbol",
+            "name": "midDots",
+            "from": {
+                "data": "data"
+            },
+            "encode": {
+                "update": {
+                    "x": {
+                        "scale": "xscale",
+                        "field": "toDate",
+                        "band": 0.5
+                    },
+                    "y": {
+                        "signal": "datum.id % 2 != 0 ? height * 0.35 : height * 0.65"
+                    },
+                    "size": {
+                        "value": 50
+                    },
+                    "tooltip": {
+                        "signal": "datum"
+                    },
+                    "fill": {
+                        "scale": "circle_colors",
+                        "field": "toDate"
+                    }
+                }
+            }
+        },
+        {
+            "type": "group",
+            "from": {
+                "data": "data"
+            },
+            "encode": {
+                "update": {
+                    "x": {
+                        "scale": "xscale",
+                        "field": "toDate",
+                        "offset": {
+                            "signal": "bandwidth('xscale')/4"
+                        }
+                    },
+                    "y": {
+                        "signal": "height/2",
+                        "offset": {
+                            "signal": "-bandwidth('xscale')/4"
+                        }
+                    },
+                    "cornerRadius": {
+                        "value": 25
+                    },
+                    "width": {
+                        "signal": "bandwidth('xscale')/2"
+                    },
+                    "height": {
+                        "signal": "bandwidth('xscale')/2"
+                    },
+                    "fill": {
+                        "value": "#fff"
+                    },
+                    "stroke": {
+                        "value": "#000"
+                    },
+                    "strokeWidth": {
+                        "value": 0
+                    }
+                }
+            },
+            "marks": [{
+                    "type": "symbol",
+                    "encode": {
+                        "update": {
+                            "x": {
+                                "signal": "item.mark.group.width/2"
+                            },
+                            "y": {
+                                "signal": "item.mark.group.height/2"
+                            },
+                            "size": {
+                                "value": 6000
+                            },
+                            "fill": {
+                                "scale": "circle_colors",
+                                "signal": "item.mark.group.datum.toDate"
+                            }
+                        }
+                    }
+                }, {
+                    "type": "symbol",
+                    "encode": {
+                        "update": {
+                            "x": {
+                                "signal": "item.mark.group.width/2"
+                            },
+                            "y": {
+                                "signal": "item.mark.group.height/2"
+                            },
+                            "size": {
+                                "value": 4500
+                            },
+                            "fill": {
+                                "scale": "circle_colors",
+                                "signal": "item.mark.group.datum.toDate"
+                            },
+                            "stroke": {
+                                "value": "#fff"
+                            },
+                            "strokeWidth": {
+                                "value": 4
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "text",
+                    "encode": {
+                        "update": {
+                            "text": {
+                                "signal": "timeFormat(item.mark.group.datum.toDate, '%Y')"
+                            },
+                            "x": {
+                                "signal": "item.mark.group.width/2"
+                            },
+                            "y": {
+                                "signal": "item.mark.group.height/2"
+                            },
+                            "align": {
+                                "value": "center"
+                            },
+                            "baseline": {
+                                "value": "middle"
+                            },
+                            "fontSize": {
+                                "value": 17
+                            },
+                            "fontWeight": {
+                                "value": "bold"
+                            },
+                            "fill": {
+                                "value": "#fff"
+                            },
+                            "font": {
+                                "value": "Quicksand"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
