@@ -149,9 +149,6 @@
                     "baseline": {
                         "value": "bottom"
                     },
-                    "tooltip": {
-                        "signal": "datum"
-                    },
                     "font": {
                         "value": "Quicksand"
                     },
@@ -179,9 +176,6 @@
                     },
                     "size": {
                         "value": 50
-                    },
-                    "tooltip": {
-                        "signal": "datum"
                     },
                     "fill": {
                         "scale": "circle_colors",
