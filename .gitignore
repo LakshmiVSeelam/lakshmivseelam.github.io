@@ -1,77 +1,46 @@
-# Ignore files that should not be committed.
-# Do not commit data, passwords, secret information or large files.
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Don't commit the assets/ folder except for the README.md file
-# Store them in a shared folder and sync here.
-!assets/README*
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
 
-# Ignore npm and bower modules. These should be created by yarn/npm and bower.
-node_modules/
-bower_components/
+# dependencies
+/node_modules
 
-# Filenames should NOT have spaces
-* *
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
 
-# Ignore byte-compiled / optimised / DLL files
-__pycache__/
-*.py[cod]
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-# Do not commit data files.
-*.csv
-*.db
-*.sqlite3
-*.sqlite3-journal
-*.dat
-*.mdb
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
-# Ignore compressed files
-*.7z
-*.zip
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
 
-# Avoid documents
-*.doc*
-*.pdf
-*.ppt*
-*.xls*
-
-# Avoid media files
-*.avi
-*.mp*
-*.wmv
-
-# Unit test
-.pytest_cache/
-
-# Ignore Gramex 0.x artefacts and log files
-.cache/
-.gramex-compiled/
-*.xhtml
-*.log
-
-# Ignore backup files
-~$*
-*~
-*.bak*
-
-# Sublime-text workspaces, etc
-*.sublime-*
-.vscode/
-
-# IPython Notebook checkpoints
-.ipynb_checkpoints
-
-# Windows / Mac OS artefacts
-*.lnk
-Desktop.ini
-$RECYCLE.BIN/
-*[Tt]humbs.db
-*.DS_Store
-
-# bash.exe.stackdump on Cygwin
-*.stackdump
-
-# R history files
-.RHistory
-
-# For Linux FUSE file system
-.fuse_hidden*
+# System Files
+.DS_Store
+Thumbs.db
