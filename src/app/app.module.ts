@@ -26,7 +26,7 @@ import { MenuComponent } from './menu/menu.component';
       {path: 'bio', component: BioComponent},
       {path: 'work', component: WorkComponent},
       {path: 'contact', component: ContactComponent}
-    ])
+    ], {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]

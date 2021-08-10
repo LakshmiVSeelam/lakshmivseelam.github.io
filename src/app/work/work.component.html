@@ -1,1 +1,39 @@
-<p>work works!</p>
+<div class="work h-100" id="">
+  <div class="d-flex h-100">
+    <div class="text-uppercase side-text d-flex flex-column align-items-center pe-3">
+      <span>W</span>
+      <span>o</span>
+      <span>r</span>
+      <span>k</span>
+    </div>
+    <div class="flex-grow-1 h-100 overflow-auto">
+      <div class="row mx-0 row-cols-2 row-cols-md-2">
+
+        <div class="col mx-1 my-1 mx-auto" *ngFor="let project of projects_data">
+          <a href="{{project.link}}" target="_blank" class="portfolio-card">
+            <div class="card text-white  rounded-0 border-0">
+              <img class="card-img rounded-0" src="{{project.imgUrl}}" alt="Card image">
+              <div class="rounded-0 text-center card-img-overlay position-absolute bottom-0 px-0"
+                [ngStyle]="{'background-color': project['b-color']}">
+                <div class="d-flex flex-column justify-content-center h-100">
+                  <h5 class="card-title">{{project.projectname}}</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+                </div>
+
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+      <div class="row mx-0 py-4">
+        <div class="col text-center">
+          <button class="btn btn-success">Contact Me !!!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

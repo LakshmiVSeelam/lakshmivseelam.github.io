@@ -1,13 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 body {
   font-family: 'Quicksand', sans-serif;
+}
+
+.menu {
+  z-index: 9
 }
 
 .solid-background {
   /* background: url('https://lh3.googleusercontent.com/wfLObCRX1zAmUxb_qGXz2mvClvgQtNAOj95O63Z1PCxad3VXgX7cnjyuo0ueoRAEfiz6Zb7JGgYMoPlVBCiaDL2rQYrri9qna-ihflZMwsEpJNuakPMYDeQiY8cGN-0bY0kzVz2qGQ=w2400'); */
   background-size: cover;
   background: #ecca07;
+}
+
+.content_wrapper {
+  padding-top: 56px;
+}
+
+.side-text {
+  font-size: 22vh;
+  font-family: 'Audiowide', cursive;
+  line-height: 1;
+  text-shadow: 2px 2px 2px #000000;
+  opacity: 0.1;
+}
+
+
+.portfolio-card:hover .card-img-overlay {
+  opacity: 1 !important;
+}
+
+.portfolio-card .card-img-overlay {
+  transition: all ease-in .2s;
+  opacity: 0;
+}
+
+.font-weight-bold{
+  font-weight: bold;
 }
