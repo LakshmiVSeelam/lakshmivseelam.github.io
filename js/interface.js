@@ -253,10 +253,7 @@
 
 
 
-	$(".review-carousel").owlCarousel({
-		singleItem:true,
-	 	autoHeight : true
-	});
+	
 
 
 
@@ -305,4 +302,30 @@
 			});
 		});
 	}
+
+
+	$.getJSON('data/testimonials.json', function(res){
+		res.forEach(ele => {
+			$('.review-carousel').append(`
+				<div class="review">
+                  <div class="text-center">
+				  	<div class="review-img">
+                    	<img alt="" class="img-circle" src="${ele['client_image']}">
+					</div>
+                    <h3>${ele['client_name']}</h3>
+                    <div class="col-md-6 col-md-offset-3">
+                      <p>${ele['client_feedback']}</p>
+                    </div>
+                  </div>
+                </div>
+		`)
+		});
+		$(".review-carousel").owlCarousel({
+			singleItem:true,
+			 autoHeight : true
+		});
+		
+	})
+
+
 })(jQuery);

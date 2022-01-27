@@ -484,9 +484,9 @@ label.error{
   margin-top: 1em;
 }
 
-.section-title{
-  /* margin-top: 0; */
-}
+/* .section-title{
+  margin-top: 0;
+} */
 
 .section-buttons .btn{
   margin:0 0.7em;
@@ -1032,7 +1032,28 @@ label.error{
   background-color:#cc4277;
 }
 
+.review {
+  padding-top: 10px;
+}
+.review-carousel{
+  padding: 20px 0px
+}
 
+.review-img{
+  width: 200px;
+    /* padding: 10px; */
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 5px #ccc;
+    overflow: hidden;
+    margin: auto;
+}
+
+.review-img img{
+  width: 100%;
+}
 
 /* ------------------------------------------------------------------------------- */
 /*  8. Contacts
@@ -1292,6 +1313,3 @@ body:not(.modal-open){
   }
 
 }
-
-
-
