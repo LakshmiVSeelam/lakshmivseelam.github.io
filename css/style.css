@@ -72,7 +72,7 @@ body{
   font-weight: 400;
   line-height: 1.62;
   color:#767676;
-  /* background-image: url('../img/body_bg.png'); */
+  /* background-image: url('../img/bg/masthead.png'); */
 }
 
 ::-webkit-scrollbar{
@@ -694,7 +694,7 @@ label.error{
 
 
 .masthead{
-  /* background: url(../img/bg/masthead.png) 50% 0 no-repeat; */
+  background: url(../img/bg/masthead.png) 50% 0 no-repeat;
   background-size: cover;
 }
 
