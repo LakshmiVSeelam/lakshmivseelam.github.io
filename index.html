@@ -27,42 +27,44 @@
 
   <!-- Loader -->
 
-  <div class="loader">
+  <!-- <div class="loader">
     <div class="spinner">
     <div class="double-bounce1"></div>
     <div class="double-bounce2"></div>
   </div>
-  </div>
+  </div> -->
 
   <div id="layout" class="layout">
   
     <!-- Header -->
 
-    <header id="top" class="navbar js-navbar-affix">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="#layout" class="brand js-target-scroll">
-            <!-- <img class="brand-img-white"  alt=""  src="img/brand-white.png"> -->
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse"> 
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#layout">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <!-- <li><a href="#services">Services</a></li>   -->
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#contacts">Contact</a></li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <!-- <a class="navbar-brand" href="#">Hidden brand</a> -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
-    </header>
+    </nav>
 
     <!-- Home -->
     
@@ -84,24 +86,25 @@
 
       <!-- About  -->
 
-      <section id="about" class="about section">
-        <div class="container">
-          <div class="row-padding row about-content">
-            <div class="col-padding column col-md-6 col-md-push-6">
-            <!-- <h2 class="section-title"></h2> -->
-            <p>It all started in 2015, that I got a keen interest in web applications. Never looked back and made my way to full stack development.</p>
-            <p>Angular, React, Ionic, Node, Python, MySQL are few of my core skills. Its always challenging and endless process to learn new stuff in this web world.</p>
-            <p>If you are looking for a developer who can handle your complete web presence, then your search is over.</p>
-            <!-- <p>What excites me ? Work </p>
-            <p>What motivates me ? A cup of coffee </p> -->
-            <!-- <div class="">
-              <a href="#" class="btn">Download CV</a>
-            </div> -->
-            </div>
+      <section id="about" class="about section vh-100">
+        <div class="container h-100">
+          <div class="row h-100 about-content">
             
-            <div class="col-padding  col-md-6 col-md-pull-6">
-              <img alt="" class="img-responsive" src="img/about.jpg">
+            
+            <div class="col-md-6 h-100">
+              <img alt="" class="img-responsive h-100" src="img/about.jpg">
             </div>
+            <div class="col-md-6">
+              <!-- <h2 class="section-title"></h2> -->
+              <p>It all started in 2015, that I got a keen interest in web applications. Never looked back and made my way to full stack development.</p>
+              <p>Angular, React, Ionic, Node, Python, MySQL are few of my core skills. Its always challenging and endless process to learn new stuff in this web world.</p>
+              <p>If you are looking for a developer who can handle your complete web presence, then your search is over.</p>
+              <!-- <p>What excites me ? Work </p>
+              <p>What motivates me ? A cup of coffee </p> -->
+              <!-- <div class="">
+                <a href="#" class="btn">Download CV</a>
+              </div> -->
+              </div>
           </div>
         </div>
       </section>
@@ -174,8 +177,8 @@
       <section id="portfolio" class="portfolio bgc-light section">
         <div class="container">
           <div class="row">
-            <div class="text-center col-md-8 col-md-offset-2">
-              <h2 class="section-title">Recent Works</h2>
+            <div class="text-center col-md-12">
+              <h2 class="section-title my-3">Recent Works</h2>
             </div>
           </div>
           <div class="row">
@@ -235,80 +238,6 @@
           <div class="text-center h3 mt-10">
             More to come...
           </div>
-          <!-- <ul class="filter">
-            <li class="active"><a href="#" data-filter="*">All</a></li>
-            <li><a href="#" data-filter=".digital">Graphics</a></li>
-            <li><a href="#" data-filter=".branding">Website</a></li>
-            <li><a href="#" data-filter=".marketing">Apps</a></li>
-          </ul>
-          <div class="isotope js-gallery">
-            <div class="isotope-item digital">
-              <a href="img/portfolio/1.jpg" title="Stationery Design">
-                <figure class="showcase-item">
-                  <div class="showcase-item-thumbnail"><img alt="" src="img/portfolio/1.jpg"></div>
-                  <figcaption class="showcase-item-hover">
-                    <div class="showcase-item-info">
-                      <div class="showcase-item-category">Branding</div>
-                      <div class="showcase-item-title">Stationery Design</div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </a>
-              </div>
-              <div class="isotope-item branding">
-                <a href="img/portfolio/2.jpg" title="Stationery Design">
-                  <figure class="showcase-item">
-                    <div class="showcase-item-thumbnail"><img alt="" src="img/portfolio/2.jpg"></div>
-                    <figcaption class="showcase-item-hover">
-                      <div class="showcase-item-info">
-                        <div class="showcase-item-category">Branding</div>
-                        <div class="showcase-item-title">Stationery Design</div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </a>
-              </div>  
-              <div class="isotope-item marketing">
-                <a href="img/portfolio/3.jpg" title="Stationery Design">
-                  <figure class="showcase-item">
-                    <div class="showcase-item-thumbnail"><img alt="" src="img/portfolio/3.jpg"></div>
-                    <figcaption class="showcase-item-hover">
-                      <div class="showcase-item-info">
-                        <div class="showcase-item-category">Branding</div>
-                        <div class="showcase-item-title">Stationery Design</div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </a>
-              </div>
-              <div class="isotope-item video">
-                <a href="img/portfolio/4.jpg" title="Stationery Design">
-                  <figure class="showcase-item">
-                    <div class="showcase-item-thumbnail"><img alt="" src="img/portfolio/4.jpg"></div>
-                    <figcaption class="showcase-item-hover">
-                      <div class="showcase-item-info">
-                        <div class="showcase-item-category">Branding</div>
-                        <div class="showcase-item-title">Stationery Design</div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </a>
-              </div>
-              <div class="isotope-item digital">
-                <a href="img/portfolio/5.jpg" title="Stationery Design">
-                  <figure class="showcase-item">
-                    <div class="showcase-item-thumbnail"><img alt="" src="img/portfolio/5.jpg"></div>
-                    <figcaption class="showcase-item-hover">
-                      <div class="showcase-item-info">
-                        <div class="showcase-item-category">Branding</div>
-                        <div class="showcase-item-title">Stationery Design</div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </a>
-              </div>
-            </div>
-          </div> -->
         </section>
 
       <!-- Reviews -->
@@ -316,8 +245,8 @@
       <section id="reviews" class="reviews text-center section">
         <div class="container">
           <div class="row">
-            <div class="text-center col-md-8 col-md-offset-2">
-              <h2 class="section-title">Clients about me</h2>
+            <div class="text-center col-md-12">
+              <h2 class="section-title my-3">Clients about me</h2>
               <!-- <p class="lead-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p> -->
             </div>
           </div>
@@ -356,11 +285,11 @@
 
       <!-- Contacts -->
         
-      <section id="contacts" class="contacts section">
+      <section id="contact" class="contacts section">
         <div class="container">
           <div class="row">
-            <div class="text-center col-md-8 col-md-offset-2">
-              <h2 class="section-title">Keep in touch</h2>
+            <div class="text-center col-md-12">
+              <h2 class="section-title my-3">Keep in touch</h2>
             </div>
           </div>
           <div class="section-body">
@@ -504,7 +433,8 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.viewport.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 <script src="js/smoothscroll.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
@@ -514,6 +444,9 @@
 <script src="js/imagesloaded.pkgd.js"></script>
 <script src="js/jquery.stellar.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/interface.js"></script> 
+<script src="js/interface.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="js/wave.js"></script>
+
 </body>
 </html>
