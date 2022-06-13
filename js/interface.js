@@ -17,6 +17,7 @@
 							type: "POST",
 							url:"https://formspree.io/f/mnqwropn",
 							data: $(form).serialize(),
+							crossDomain: true,
 							success: function() {
 								$('.modal').modal('hide');
 								$('#success').modal('show');
@@ -178,7 +179,7 @@
 		  });
 	}
 
-	contactForm()
+	// contactForm()
 	testimonials()
 	// aboutConstruct()
 	portfolioConstruct()
