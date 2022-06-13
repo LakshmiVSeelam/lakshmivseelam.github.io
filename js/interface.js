@@ -15,7 +15,7 @@
 					submitHandler: function(form){
 						$.ajax({
 							type: "POST",
-							url:"mail.php",
+							url:"https://formspree.io/f/mnqwropn",
 							data: $(form).serialize(),
 							success: function() {
 								$('.modal').modal('hide');
