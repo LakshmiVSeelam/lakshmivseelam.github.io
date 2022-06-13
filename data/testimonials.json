@@ -12,14 +12,14 @@
   ],
   "recog": [
     {
-      "org": "NeoSoft Technologies",
+      "org": "",
       "image": "img/reviews/test_award.jpg",
-      "desc": "Recognized and awarded for my contibution towards various projects as a frontend developer."
+      "desc": "Recognized and awarded for my contibution towards various projects as a frontend developer in NeoSoft Technologies"
     },
     {
       "org": "Gramener",
       "image": "img/reviews/test_award.jpg",
-      "desc": "Lakshmi started working on FNHW projects as chart developer and later she had taken ownership of dashboards and delivered it on time. She is a quick learner and always adds value to her work. Lakshmi's expertise in UI helped us to deliver the quality dashboard. Lakshmi's work on JPHIEGO project is also commendable."
+      "desc": "Lakshmi started working on projects as chart developer and later she had taken ownership of dashboards and delivered it on time. She is a quick learner and always adds value to her work. Lakshmi's expertise in UI helped us to deliver the quality dashboard."
     }
   ]
   }

@@ -58,7 +58,6 @@
 					  <div class="row m-0 text-center d-flex justify-content-center align-items-center">
 						  
 						<div class="col text-dark">
-						  
 						  <p class="text-start small mb-0">${ele['desc']}</p>
 						  <h6 class="text-end h6 mb-0"><strong>- ${ele['org']}</strong></h6>
 						</div>
