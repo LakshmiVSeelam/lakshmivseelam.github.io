@@ -1,0 +1,30 @@
+[
+    {
+        "start" : "February 2015",
+        "end": "February 2016",
+        "org": "Studio Ethics",
+        "role": "Junior Web Designer",
+        "color" : "rgba(195, 108, 177, 0.5)"
+    },
+    {
+        "start" : "March 2016",
+        "end": "September 2018",
+        "org": "NeoSoft Technologies",
+        "role": "Frontend Specialist",
+        "color" : "rgba(195, 108, 177, 0.5)"
+    },
+    {
+        "start" : "November 2018",
+        "end": "August 2021",
+        "org": "Gramener",
+        "role": "Full Stack Developer",
+        "color" : "rgba(195, 108, 177, 0.5)"
+    },
+    {
+        "start" : "August 2021",
+        "end": "present",
+        "org": "SWQA",
+        "role": "Senior Full Stack Developer",
+        "color" : "rgba(195, 108, 177, 0.5)"
+    }
+]

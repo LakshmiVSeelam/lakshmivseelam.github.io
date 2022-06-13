@@ -19,11 +19,15 @@
 
 <!-- Styles -->
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 <link href="css/style.css" rel="stylesheet"  media="screen">
 
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#scrollspy-nav" tabindex="0">
 
   <!-- Loader -->
 
@@ -38,14 +42,14 @@
   
     <!-- Header -->
 
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top py-0" id="scrollspy-nav">
       <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <!-- <a class="navbar-brand" href="#">Hidden brand</a> -->
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pt-2">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
@@ -68,17 +72,22 @@
 
     <!-- Home -->
     
-    <main id="home" class="masthead masked" data-stellar-background-ratio="0.8">
-      <div class="opener rel-1">
-        <div class="container">
-          <h1>Hi, i'm <br>Lakshmi Seelam</h1>
-          <p class="lead-text wow fadeInUp">Full Stack Developer &amp; Freelancer</p>
-          <div class="control">
-            <a href="#request" class="btn wow fadeInUp" data-wow-delay="0.2s" data-toggle="modal">Contact me</a>
-          </div>
+    <div class="vh-100 bgc-dark" id="home">
+      <div class="h-100 container text-center d-flex flex-column">
+        <!-- <h5>You are about to witness a geek who is</h5> -->
+        <h1 class="text-center display-4 text-uppercase my-auto text-white">Creative . Trendy . Passionate</h1>
+        <div class="d-flex flex-column pb-5">
+          <h6 class="text-center text-light">and that's me... &#128521;</h6>
+          <i class="text-light fa-solid fa-angle-down animate__shakeY animate__animated animate__slower animate__infinite"></i>
+        
         </div>
+        <!-- <h1>Hi, i'm <br>Lakshmi Seelam</h1>
+        <p class="lead-text wow fadeInUp">Full Stack Developer &amp; Freelancer</p>
+        <div class="control">
+          <a href="#request" class="btn wow fadeInUp" data-wow-delay="0.2s" data-toggle="modal">Contact me</a>
+        </div> -->
       </div>
-    </main>
+    </div>
 
     <!-- Content -->
 
@@ -86,170 +95,62 @@
 
       <!-- About  -->
 
-      <section id="about" class="about section vh-100">
-        <div class="container h-100">
-          <div class="row h-100 about-content">
-            
-            
-            <div class="col-md-6 h-100">
-              <img alt="" class="img-responsive h-100" src="img/about.jpg">
-            </div>
-            <div class="col-md-6">
-              <!-- <h2 class="section-title"></h2> -->
-              <p>It all started in 2015, that I got a keen interest in web applications. Never looked back and made my way to full stack development.</p>
-              <p>Angular, React, Ionic, Node, Python, MySQL are few of my core skills. Its always challenging and endless process to learn new stuff in this web world.</p>
-              <p>If you are looking for a developer who can handle your complete web presence, then your search is over.</p>
-              <!-- <p>What excites me ? Work </p>
-              <p>What motivates me ? A cup of coffee </p> -->
-              <!-- <div class="">
-                <a href="#" class="btn">Download CV</a>
-              </div> -->
+      <section id="about" class="about section vh-100 pt-0">
+        
+        <div class="w-100 h-100 mx-auto position-relative d-flex flex-column container" id="about-con">
+          <!-- <h1 class="about-title text-center text-white">Lakshmi</h1> -->
+          <div class="row w-100 flex-grow-1 m-0">
+            <!-- <img src="/img/about.jpg" class="img-responsive w-100" /> -->
+            <!-- <div class="col-12 mx-auto d-flex justify-content-center align-items-stretch" id="area">
+            </div> -->
+            <div class="col-6 align-items-center d-flex">
+              <div class="p-5 border border-5 border-white">
+                <p class="text-white">
+                  Hi !! I am Lakshmi Seelam, a Full Stack Developer.</p>
+                <p class="text-white">
+                  To brief about my career and skills, I have more than 7 years of experience. My skill set includes Python, Nodejs, Angular, React, Ionic, Bootstrap, Javascript, Bootstrap, HTML5, CSS3, etc.
+                </p>
+                <p class="text-white">
+                  Learning new technologies and building creative web applications is what I love about my job.
+                </p>
+                <p class="text-white">
+                  You have an idea, I will provide you with the best suitable and budget friendly solution. <a href="#contact">Let's discuss !!! </a>
+                </p>
+                <!-- <button class="btn btn-primary text-capitalize">Download CV !!</button> -->
+                <a class="btn btn-primary text-capitalize" href="/data/cv.pdf" title="" download>Download CV !!</a>
               </div>
+              
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Resume -->
-
-      <!-- <section id="resume" class="resume text-center  bgc-light section">
-        <div class="container">
-          <div class="row">
-            <div class="text-center col-md-8 col-md-offset-2">
-              <h2 class="section-titler">View my resume</h2>
-              <p class="lead-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            </div>
-          </div> 
-        <div class="section-buttons section-body-sm">
-          <a href="#" class="btn">Download CV</a>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- Services -->
-
-      <!-- <section id="services" class="services section">
-        <div class="container">
-          <div class="row">
-            <div class="text-center col-md-8 col-md-offset-2">
-              <h2 class="section-title">Services</h2>
-              <p class="lead-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            </div>
-          </div> 
-        <div class="section-body">
-          <div class="row-columns row">
-          <div class="column col-md-4">
-            <i class="text-primary icon ion-speedometer"></i>
-            <h4>Graphic Design</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </div>
-          <div class="column col-md-4">
-             <i class="text-primary icon ion-log-out"></i>
-             <h4>Website Development</h4>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </div>
-          <div class="column col-md-4">
-            <i class="text-primary icon ion-monitor"></i>     
-            <h4>App Development</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </div>
-          <div class="column col-md-4">
-            <i class="text-primary icon ion-code"></i>
-            <h4>Valid html code</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </div>
-          <div class="column col-md-4">
-             <i class="text-primary icon ion-radio-waves"></i>
-             <h4>Font Awesome</h4>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </div>
-          <div class="column col-md-4">
-            <i class="text-primary icon ion-wifi"></i>     
-            <h4>Clean design</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </div>
-        </div>
-          </div>
-        </div>
-      </section>   -->
-
+      
       <!-- Portfolio -->
 
-      <section id="portfolio" class="portfolio bgc-light section">
+      <section id="portfolio" class="portfolio section">
         <div class="container">
           <div class="row">
-            <div class="text-center col-md-12">
-              <h2 class="section-title my-3">Recent Works</h2>
+            <div class="text-left col-md-12 title_wrap">
+              <h1 class="m-0 text-white text-uppercase display-4">Few of Many</h1>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-6 column">
-              <a href="https://www.promotel.in/" target="blank">
-                <figure class="showcase-item">
-                  <div class="showcase-item-thumbnail"><img alt="" src="img/portfolio/1.jpg"></div>
-                  <figcaption class="showcase-item-hover">
-                    <div class="showcase-item-info">
-                      <!-- <div class="showcase-item-category">Website Development</div> -->
-                      <div class="showcase-item-title">A simple angular website developed for a digital marketing agency.</div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-md-6 column">
-              <a href="https://petswonder.in/" target="blank">
-                <figure class="showcase-item">
-                  <div class="showcase-item-thumbnail"><img alt="" src="img/portfolio/2.jpg"></div>
-                  <figcaption class="showcase-item-hover">
-                    <div class="showcase-item-info">
-                      <!-- <div class="showcase-item-category">Branding</div> -->
-                      <div class="showcase-item-title">An e-commerce website developed for a pet store using shopify.</div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-md-6 column">
-              <a href="https://ridgesportsinfra.com/" target="blank">
-                <figure class="showcase-item">
-                  <div class="showcase-item-thumbnail"><img alt="" src="img/portfolio/3.jpg"></div>
-                  <figcaption class="showcase-item-hover">
-                    <div class="showcase-item-info">
-                      <!-- <div class="showcase-item-category">Branding</div> -->
-                      <div class="showcase-item-title">A simple one page website for a professional sports infra developers. </div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-md-6 column">
-              <a href="https://www.behance.net/lakshmiseelam" target="blank">
-                <figure class="showcase-item">
-                  <div class="showcase-item-thumbnail"><img alt="" src="img/portfolio/4.jpg"></div>
-                  <figcaption class="showcase-item-hover">
-                    <div class="showcase-item-info">
-                      <!-- <div class="showcase-item-category">Branding</div> -->
-                      <div class="showcase-item-title">Graphic Designs</div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-            <div class="col-md-6 column">
-              <a href="https://trustrotary.org/#/home" target="blank">
-                <figure class="showcase-item">
-                  <div class="showcase-item-thumbnail"><img alt="" src="img/portfolio/5.jpg"></div>
-                  <figcaption class="showcase-item-hover">
-                    <div class="showcase-item-info">
-                      <!-- <div class="showcase-item-category">Branding</div> -->
-                      <div class="showcase-item-title">A simple website for an NGO</div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
+          <div id="carouselExampleIndicators" class="carousel slide carousel-fade shadow" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-indicators" id="portfolio-indicators"></div>
+            <div class="carousel-inner" id="portfolio-items"></div>
+            <button class="carousel-control-prev w-auto px-2" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="text-dark h2" aria-hidden="true"> <i class="fa fa-angle-left"></i> </span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next w-auto px-2" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="text-dark h2" aria-hidden="true"> <i class="fa fa-angle-right"></i></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <div class="text-center h3 mt-10">
-            More to come...
+          
+          
+          <div class=" extra_text_wrap text-white pb-3">
+            <h5 class=" mb-0 text-end pb-5 text-uppercase">More to come</h5>
           </div>
         </section>
 
@@ -257,19 +158,38 @@
         
       <section id="reviews" class="reviews text-center section">
         <div class="container">
-          <div class="row">
-            <div class="text-center col-md-12">
-              <h2 class="section-title my-3">Clients about me</h2>
-              <!-- <p class="lead-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p> -->
-            </div>
-          </div>
-          <div class="">
+          <div class="mt-3">
             <div class="row">
-              <div class="review-carousel carousel">
+              <div class="col-md-7 position-relative p-0">
                 
+                <div class="review-carousel carousel px-4">
+                  
+                  
+                </div>
+                <div class="position-absolute quote"><i class="fa-solid fa-quote-left p-3 text-white"></i></div>
+              </div>
+              <div class="col-md-7 ms-auto position-relative p-0 mt-4">
+                
+                <div class="recog-carousel carousel px-4 py-1">
+                  
+                  
+                </div>
+                <!-- <div class="position-absolute rec-icon"><i class="fa-solid fa-award text-white"></i></div> -->
               </div>
             </div>
           </div>
+
+          <!-- <div class="d-flex animate__animated animate__rollIn cursor-pointer">
+            <img src="img/reviews/test_award.jpg" width="150px" class="rounded-circle animate__animated animate__pulse animate__infinite"/>
+          </div> -->
+          <!-- <div class="d-flex">
+            <img src="img/reviews/test_award.jpg" width="150px" class="rounded-circle animate__animated animate__pulse animate__infinite"/>
+          </div> -->
+          <!-- <div class="d-flex">
+            <img src="img/reviews/test_award.jpg" width="100px" class="rounded-circle"/>
+            <i class="fa-solid fa-circle-play h2 m-0 px-4 py-3 bg-white rounded"></i>
+          </div> -->
+
         </div>
       </section>
 
@@ -298,89 +218,87 @@
 
       <!-- Contacts -->
         
-      <section id="contact" class="contacts section">
-        <div class="container">
-          <div class="row">
-            <div class="text-center col-md-12">
-              <h2 class="section-title my-3">Keep in touch</h2>
-            </div>
-          </div>
-          <div class="section-body">
-            <div class="row-columns row">
-            <div class="column col-md-7">
-            <form class="form-request js-ajax-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" name="name" required placeholder="Name *">
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="email" class="form-control" name="email" required placeholder="Email *">
-                </div>
-                <div class="form-group col-md-12">
-                  <textarea class="form-control" rows="3" name="message" placeholder="Message"></textarea>
-                </div>
-                <div class="col-md-12 text-right">
-                  <button type="submit" class="btn" data-text-hover="Submit">Send request</button>
+      <section id="contact" class="contacts section position-relative">
+        <div class="container mt-5">
+          
+          <div class="align-items-center row">
+            
+            <div class=" col-md-5">
+              <div class="text-left">
+                <p class="section-title text-lowercase m-0 text-dark">A Simple Hi Can Lead To wonders...</p>
+                <h2>Say hi !!!</h2>
+              </div>
+              <div class="d-flex align-items-center">
+                <a href="https://api.whatsapp.com/send?phone=919967623013" target="blank"><i class="fa-brands fa-whatsapp h2 me-3"></i></a>
+                <a href="https://linkedin.com/in/lakshmiseelam" target="blank"><i class="fa-brands fa-linkedin-in h2 me-3"></i></a>
+                <a href="https://behance.net/lakshmiseelam" target="blank"><i class="fa-brands fa-behance h2 me-3"></i></a>
+                <a href="https://github.com/LakshmiVSeelam" target="blank"><i class="fa-brands fa-github h2 me-3"></i></a>
+              </div>
+              <div class="d-flex align-items-center my-2">
+                <i class="fa-solid fa-phone me-2"></i>
+                <div>
+                  <h4 class="w-100">(+91) 90292 72122</h4>
+                  <h4 class="w-100">(+91) 99676 23013</h4>
+                  <h4 class="w-100">(+91) 89767 23823</h4>
                 </div>
               </div>
-            </form>
-            </div>
-            <div class="column col-md-4 ps-5">
-              <div class="contact-line d-flex align-items-center">
-                <div class="media-left me-2">
-                  <i class="text-primary icon ion-ios-telephone"></i>
-                </div>
-                <div class="media-right">
-                  <h4>Phone</h4>
-                  +91 9029 272 122
-                </div>
+              <div class="d-flex align-items-center my-2">
+                <i class="fa-solid fa-location-dot me-2"></i> 
+                <h4>Hyderabad, India</h4>
               </div>
-              <div class="contact-line d-flex align-items-center">
-                <div class="media-left me-2">
-                  <i class="text-primary icon ion-android-pin"></i>
-                </div>
-                <div class="media-right">
-                  <h4>Address</h4>
-                  101 Sai Ganesh Sadan,<br> Pragathi Nagar, Hyderabad
-                </div>
-              </div>
-              <div class="contact-line d-flex align-items-center">
-                <div class="media-left me-2">
-                  <i class="text-primary icon ion-email"></i>
-                </div>
-                <div class="media-right">
-                  <h4>Email</h4>
-                  lakshmivseelam@gmail.com
-                </div>
+              <div class="d-flex align-items-center my-2">
+                <i class="fa-solid fa-envelope me-2"></i>
+                <h4>lakshmivseelam@gmail.com</h4>
               </div>
             </div> 
+            <div class=" col-md-7">
+              <form class="form-request js-ajax-form shadow-sm px-5 py-4 bgc-dark" action="mail.php" method="POST">
+                <div class="row">
+                  <div class="form-group col-md-12">
+                    <input type="text" class="form-control bg-transparent" name="name" required placeholder="Name *">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="email" class="form-control bg-transparent" name="email" required placeholder="Email *">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control bg-transparent" name="contact" required placeholder="Contact Number *">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <textarea class="form-control bg-transparent" rows="3" name="message" placeholder="Message"></textarea>
+                  </div>
+                  <div class="col-md-12 text-end mt-4">
+                    <button type="submit" class="btn btn-sm py-2" data-text-hover="Submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            </div>
+        </div>
+        <footer id="footer" class="footer text-center text-left-md bgc-dark position-absolute bottom-0 start-50 translate-middle-x w-100">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 ">
+                <div class="social text-center">
+                  <!-- <a href="#" class="fa fa-facebook"></a> -->
+                  <a target="blank" href="https://linkedin.com/in/lakshmiseelam" class="fa fa-linkedin"></a>
+                  <a target="blank" href="https://behance.net/lakshmiseelam" class="fa fa-behance"></a>
+                  <a target="blank" href="https://github.com/LakshmiVSeelam" class="fa fa-github"></a>
+                </div>
+              </div>
+              <!-- <div class="col-md-7 text-right-md">
+                <div class="copy">
+                  © 2017 Larry. All rights reserved by <a href="http://themeforest.net/user/murren20" target="_blank">Murren20</a>
+                </div>
+              </div> -->
             </div>
           </div>
-        </div>
+        </footer>
       </section>
     </div>
 
     <!-- Footer -->
 
-    <footer id="footer" class="footer text-center text-left-md bgc-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 ">
-            <div class="social text-center">
-              <!-- <a href="#" class="fa fa-facebook"></a> -->
-              <a target="blank" href="www.linkedin.com/in/lakshmiseelam" class="fa fa-linkedin"></a>
-              <a target="blank" href="https://www.behance.net/lakshmiseelam" class="fa fa-behance"></a>
-              <a target="blank" href="https://github.com/LakshmiVSeelam" class="fa fa-github"></a>
-            </div>
-          </div>
-          <!-- <div class="col-md-7 text-right-md">
-            <div class="copy">
-              © 2017 Larry. All rights reserved by <a href="http://themeforest.net/user/murren20" target="_blank">Murren20</a>
-            </div>
-          </div> -->
-        </div>
-      </div>
-    </footer>
+    
   </div>
 
   <!-- Modals -->
@@ -447,8 +365,8 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.viewport.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-<script src="js/smoothscroll.js"></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<!-- <script src="js/smoothscroll.js"></script> --> 
 <script src="js/wow.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
@@ -457,9 +375,11 @@
 <script src="js/imagesloaded.pkgd.js"></script>
 <script src="js/jquery.stellar.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/interface.js"></script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="js/wave.js"></script>
+<script src="https://kit.fontawesome.com/c7ad1ffede.js" crossorigin="anonymous"></script>
+<script src="js/interface.js"></script>
+
+<!-- <script src="js/wave.js"></script> -->
 
 </body>
 </html>

@@ -1,8 +1,26 @@
+
 [
+  {
+  "testimonials" : 
+  [
     {
       "client_mail": "srinu562@gmail.com",
       "client_name": "ANUMALA SATYA SRINIVAS REDDY",
       "client_feedback": "When i was initially introduced to Ms Lakshmi and gave my suggestions about my website outlook, she matched my website as per my expectations. Very professional. I am happy with the overall experience and will surely suggest to everyone.",
       "client_image": "https://drive.google.com/uc?id=1dz-LDx_pVbfn0Y09ExrZ6WMF-0fiJqwN"
     }
+  ],
+  "recog": [
+    {
+      "org": "NeoSoft Technologies",
+      "image": "img/reviews/test_award.jpg",
+      "desc": "Recognized and awarded for my contibution towards various projects as a frontend developer."
+    },
+    {
+      "org": "Gramener",
+      "image": "img/reviews/test_award.jpg",
+      "desc": "Lakshmi started working on FNHW projects as chart developer and later she had taken ownership of dashboards and delivered it on time. She is a quick learner and always adds value to her work. Lakshmi's expertise in UI helped us to deliver the quality dashboard. Lakshmi's work on JPHIEGO project is also commendable."
+    }
   ]
+  }
+]
