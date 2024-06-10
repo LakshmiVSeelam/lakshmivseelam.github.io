@@ -1,13 +1,125 @@
 /* @import './node_modules/bootstrap/dist/css/bootstrap.min.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 
 body {
     font-family: 'Quicksand', sans-serif;
+    background-color: #000;
+    font-weight: lighter;
+    color: #fff;
 }
 
-.solid-background {
-    /* background: url('https://lh3.googleusercontent.com/wfLObCRX1zAmUxb_qGXz2mvClvgQtNAOj95O63Z1PCxad3VXgX7cnjyuo0ueoRAEfiz6Zb7JGgYMoPlVBCiaDL2rQYrri9qna-ihflZMwsEpJNuakPMYDeQiY8cGN-0bY0kzVz2qGQ=w2400'); */
-    background-size: cover;
-    background: #d4b303;
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-weight: lighter;
+}
+
+.logo-side-bar{
+    position: fixed;
+    /* background-color: #ccc; */
+    top:0;
+    bottom: 0;
+    display: flex;
+    margin-left:-3.5rem;
+    z-index: 1;
+    transition: all ease-in 0.5s;
+}
+
+.logo{
+    text-wrap: wrap;
+    font-family: "Archivo Black", sans-serif;
+    writing-mode: tb;
+    text-orientation: upright;
+    font-size: 8.5rem;
+    margin: auto auto;
+    font-weight: bolder;
+    letter-spacing: -5rem;
+    text-indent: -5rem;
+    z-index: -1;
+    pointer-events: none;
+    transition: all ease-in 0.5s;
+    color: #fff;
+    opacity: 0.03;
+}
+
+.home-styling{
+    opacity: 0.7;
+}
+
+.home-spacing{
+    margin-left: 0px;
+}
+
+.main-content{
+    /* padding-left:6rem; */
+    /* background-color: #000; */
+    /* z-index: 9; */
+}
+
+.menu{
+    margin-left: -5rem;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu a.active{
+    font-size: 20px;
+}
+
+.menu a.active::after{
+    content: ' />';
+    font-size: 18px;
+}
+
+.menu a.active::before{
+    content: '< ';
+    font-size: 18px;
+}
+
+.sec{
+    height: 100vh;
+    /* padding-left: 6rem; */
+}
+
+.sec-title{
+    padding:2rem 0;
+}
+
+/* home section */
+.home-sec{
+    background: url('../../assets/img/testpic.jpg') no-repeat;
+    background-size: contain;
+    /* background-color: #000; */
+    color: #fff;
+}
+
+/* about section */
+.about-sec, .work-sec, .contact-sec{
+    padding-left: 10rem;
+}
+
+/* .about-sec{
+    background-color: #444;
+    color: #fff;
+}
+
+.work-sec{
+    background-color: #444;
+    color:#fff
+}
+
+.contact-sec{
+    background-color: #444;
+    color: #fff;
+} */
+
+.mail-text{
+    text-decoration: none;
+}
+
+.contact-bg{
+    background-color: rgba(0,0,0,0.5);
 }
