@@ -1,8 +1,10 @@
+function isMobile() {
+    return window.innerWidth <= 768;
+}
 // Function to handle scroll events
 function onScroll() {
     // Get the scroll position
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    console.log('top', scrollTop)
     if(scrollTop > 0){
         $('.logo').removeClass('home-styling')
         $('.logo-side-bar').removeClass('home-spacing')
@@ -14,12 +16,26 @@ function onScroll() {
     }
 }
 
+
+
 $(document).ready(function(){
-    $('#navbar-scrollspy').hide()
-    onScroll()
-    $('body').removeClass('overflow-hidden')
+    $('body').scrollspy({ target: '#navbar-scrollspy' });
+    $('.mobile-menu-bars').on('click', function () {
+        $('#navbarNav').toggleClass('show');
+    });
+    if (!isMobile()) {
+        
+        onScroll()
+        $('#navbar-scrollspy').hide()
+        $('body').removeClass('overflow-hidden')
+        
+        // Attach the onScroll function to the window's scroll event
+        window.addEventListener('scroll', onScroll);
+    }
     $('#loader').hide();
 })
 
-// Attach the onScroll function to the window's scroll event
-window.addEventListener('scroll', onScroll);
+
+
+
+

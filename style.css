@@ -90,7 +90,7 @@ body {
 
 /* home section */
 .home-sec{
-    background: url('../../assets/img/testpic.jpg') no-repeat;
+    /* background: url('../../assets/img/testpic.jpg') no-repeat; */
     background-size: contain;
     /* background-color: #000; */
     color: #fff;
@@ -122,4 +122,66 @@ body {
 
 .contact-bg{
     background-color: rgba(0,0,0,0.5);
+}
+
+
+/* mobile  */
+@media (max-width: 768px) {
+    .menu{
+        margin-left: 0;
+        background: rgba(0,0,0,0.7);
+        text-align: center;
+        align-items: center !important;
+    }
+    .navbar-toggler{
+        align-self: self-start;
+    }
+    .sec{
+        padding-top: 20px;
+    }
+    .home-sec{
+        background: none;
+    }
+    .logo-side-bar{
+        bottom: auto;
+        right: 0;
+        left: 0;
+        display: block;
+    }
+    .mobile-logo{
+        font-size: 2rem;
+        font-family: "Archivo Black", sans-serif;
+        opacity: 0.7;
+    }
+    .logo{
+        font-size: 4rem;
+        letter-spacing: -2rem;
+    }
+    .about-sec, .work-sec, .contact-sec{
+        padding: 20px 45px;
+    }
+    .contact-sec .border-end{
+        border-right: 0!important;
+    }
+
+    .contact-sec .h3{
+        font-size: 20px;
+    }
+
+    .work-sec .carousel{
+        padding: 0px;
+        margin:0px
+    }
+
+    .work-sec .project-title{
+        display: none
+    }
+
+    .work-sec .proj-desc{
+        font-size: 16px;
+    }
+
+    .work-sec img{
+        width: 50%!important;
+    }
 }
