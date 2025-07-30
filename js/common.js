@@ -5,7 +5,7 @@ function isMobile() {
 function onScroll() {
     // Get the scroll position
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    console.log(scrollTop)
+    console.log(scrollTop, scrollTop>0)
     console.log($('#navbar-scrollspy'))
     if(scrollTop > 0){
         $('.logo').removeClass('home-styling')
