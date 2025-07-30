@@ -34,7 +34,7 @@ body {
     font-size: 8.5rem;
     margin: auto auto;
     font-weight: bolder;
-    letter-spacing: -5rem;
+    letter-spacing: 2rem;
     text-indent: -5rem;
     z-index: -1;
     pointer-events: none;
