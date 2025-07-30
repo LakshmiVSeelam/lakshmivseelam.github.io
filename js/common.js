@@ -23,6 +23,7 @@ $(document).ready(function(){
     $('.mobile-menu-bars').on('click', function () {
         $('#navbarNav').toggleClass('show');
     });
+    onScroll();
     if (!isMobile()) {
         
         onScroll()
