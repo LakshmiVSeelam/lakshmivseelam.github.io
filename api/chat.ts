@@ -36,6 +36,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     return errorResponse(res, "Server configuration error", 500);
   }
 
+  // Debug: Check API key
+  const apiKey = process.env.OPENAI_API_KEY;
+  console.log("API Key present:", !!apiKey);
+  console.log("API Key length:", apiKey?.length || 0);
+  console.log("API Key prefix:", apiKey?.substring(0, 10) || "none");
+
   try {
     const { message, conversationHistory = [] } = req.body as ChatRequest;
 
