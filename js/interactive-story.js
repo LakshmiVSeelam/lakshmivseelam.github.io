@@ -5,9 +5,9 @@
 
 class InteractiveStory {
   constructor() {
-    this.currentChapter = 'start';
+    this.currentChapter = "start";
     this.storyHistory = [];
-    this.apiEndpoint = '/api/generate-story';
+    this.apiEndpoint = "/api/generate-story";
     this.init();
   }
 
@@ -17,7 +17,7 @@ class InteractiveStory {
   }
 
   createStorySection() {
-    const existingSection = document.getElementById('story-section');
+    const existingSection = document.getElementById("story-section");
     if (existingSection) return;
 
     const storyHTML = `
@@ -48,11 +48,11 @@ class InteractiveStory {
     `;
 
     // Insert after Work section
-    const workSection = document.getElementById('work');
+    const workSection = document.getElementById("work");
     if (workSection) {
-      workSection.insertAdjacentHTML('afterend', storyHTML);
+      workSection.insertAdjacentHTML("afterend", storyHTML);
     } else {
-      document.querySelector('main')?.insertAdjacentHTML('beforeend', storyHTML);
+      document.querySelector("main")?.insertAdjacentHTML("beforeend", storyHTML);
     }
   }
 
@@ -67,10 +67,10 @@ The tech world sprawls before me like an uncharted territory. Should I dive into
 
 <em>Every choice shapes a different story. Where should we begin?</em>`,
         choices: [
-          { text: '🚀 The Startup Adventure', chapter: 'startup' },
-          { text: '🏢 Enterprise Scale', chapter: 'enterprise' },
-          { text: '💻 Technical Deep Dive', chapter: 'technical' }
-        ]
+          { text: "🚀 The Startup Adventure", chapter: "startup" },
+          { text: "🏢 Enterprise Scale", chapter: "enterprise" },
+          { text: "💻 Technical Deep Dive", chapter: "technical" },
+        ],
       },
       startup: {
         content: `<strong>Chapter: The Startup Hustle</strong>
@@ -83,10 +83,10 @@ Launch day was pure adrenaline. We went live. Traffic started pouring in. Client
 
 The fast-paced chaos taught me more than any textbook ever could. Every bug was a lesson. Every feature request was an opportunity. Every client feedback was gold.`,
         choices: [
-          { text: '🛠️ What tech stack did you use?', chapter: 'technical' },
-          { text: '💪 Tell me about a challenge', chapter: 'challenge' },
-          { text: '📈 How did you grow?', chapter: 'growth' }
-        ]
+          { text: "🛠️ What tech stack did you use?", chapter: "technical" },
+          { text: "💪 Tell me about a challenge", chapter: "challenge" },
+          { text: "📈 How did you grow?", chapter: "growth" },
+        ],
       },
       enterprise: {
         content: `<strong>Chapter: Enterprise at Scale</strong>
@@ -99,10 +99,10 @@ Team collaboration at this level? Mind-blowing. Morning standups with teams acro
 
 The pressure was intense, but so was the learning curve. I discovered that enterprise development isn't about moving fast – it's about moving <em>right</em>.`,
         choices: [
-          { text: '🎯 What were the biggest challenges?', chapter: 'challenge' },
-          { text: '💻 Show me the tech', chapter: 'technical' },
-          { text: '🌱 How did this shape you?', chapter: 'growth' }
-        ]
+          { text: "🎯 What were the biggest challenges?", chapter: "challenge" },
+          { text: "💻 Show me the tech", chapter: "technical" },
+          { text: "🌱 How did this shape you?", chapter: "growth" },
+        ],
       },
       technical: {
         content: `<strong>Chapter: The Tech Stack Chronicles</strong>
@@ -119,10 +119,10 @@ Let me take you behind the scenes of my technical arsenal.
 
 But here's the secret – technology is just a tool. The real magic? Knowing which tool to use when, and why.`,
         choices: [
-          { text: '🚀 Show me a project', chapter: 'startup' },
-          { text: '💡 How do you choose technologies?', chapter: 'growth' },
-          { text: '🎯 What's next for you?', chapter: 'challenge' }
-        ]
+          { text: "🚀 Show me a project", chapter: "startup" },
+          { text: "💡 How do you choose technologies?", chapter: "growth" },
+          { text: `🎯 What's next for you?`, chapter: "challenge" },
+        ],
       },
       challenge: {
         content: `<strong>Chapter: The 3 AM Debugging Session</strong>
@@ -141,10 +141,10 @@ This was the Ridge Sports platform. We'd just launched a major feature. Everythi
 
 That sunrise coffee never tasted better. The lesson? Sometimes the hardest bugs teach you the most valuable lessons about system design.`,
         choices: [
-          { text: '📚 What did you learn?', chapter: 'growth' },
-          { text: '🛠️ Show me your tech approach', chapter: 'technical' },
-          { text: '🎉 Tell me about successes', chapter: 'startup' }
-        ]
+          { text: "📚 What did you learn?", chapter: "growth" },
+          { text: "🛠️ Show me your tech approach", chapter: "technical" },
+          { text: "🎉 Tell me about successes", chapter: "startup" },
+        ],
       },
       growth: {
         content: `<strong>Chapter: Evolution of a Developer</strong>
@@ -169,10 +169,10 @@ But here's what I've really learned: <em>The best developers never stop being st
 
 Every project teaches something new. Every bug is a lesson. Every code review is an opportunity to grow.`,
         choices: [
-          { text: '💼 Let\'s talk opportunities', chapter: 'contact' },
-          { text: '🔄 Start over', chapter: 'start' },
-          { text: '📊 See my projects', chapter: 'work' }
-        ]
+          { text: "💼 Let's talk opportunities", chapter: "contact" },
+          { text: "🔄 Start over", chapter: "start" },
+          { text: "📊 See my projects", chapter: "work" },
+        ],
       },
       contact: {
         content: `<strong>Ready to Connect?</strong>
@@ -192,20 +192,20 @@ Thank you for journeying through my story! I hope you got a sense of my passion 
 
 I'm always excited to hear about new challenges and opportunities. Whether it's a startup that needs to move fast or an enterprise that needs to scale smart, let's build something amazing together!`,
         choices: [
-          { text: '💬 Chat with AI Me', chapter: 'chat' },
-          { text: '📊 View My Work', chapter: 'work' },
-          { text: '🔄 Restart Story', chapter: 'start' }
-        ]
-      }
+          { text: "💬 Chat with AI Me", chapter: "chat" },
+          { text: "📊 View My Work", chapter: "work" },
+          { text: "🔄 Restart Story", chapter: "start" },
+        ],
+      },
     };
 
-    this.loadStory(staticStories['start']);
+    this.loadStory(staticStories["start"]);
     this.updateProgress(1);
   }
 
   async loadStory(storyData) {
-    const contentDiv = document.getElementById('story-content');
-    
+    const contentDiv = document.getElementById("story-content");
+
     if (!contentDiv) return;
 
     // Show loader
@@ -217,58 +217,62 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
     `;
 
     // Simulate loading for smooth UX
-    await new Promise(resolve => setTimeout(resolve, 800));
+    await new Promise((resolve) => setTimeout(resolve, 800));
 
     // Create story card
-    const storyCard = document.createElement('div');
-    storyCard.className = 'story-card fade-in';
+    const storyCard = document.createElement("div");
+    storyCard.className = "story-card fade-in";
     storyCard.innerHTML = `
       <div class="story-text">
-        ${storyData.content.replace(/\n/g, '<br><br>')}
+        ${storyData.content.replace(/\n/g, "<br><br>")}
       </div>
       <div class="story-choices">
-        ${storyData.choices.map((choice, index) => `
+        ${storyData.choices
+          .map(
+            (choice, index) => `
           <button class="story-choice-btn" data-chapter="${choice.chapter}" data-index="${index}">
             ${choice.text}
           </button>
-        `).join('')}
+        `
+          )
+          .join("")}
       </div>
     `;
 
-    contentDiv.innerHTML = '';
+    contentDiv.innerHTML = "";
     contentDiv.appendChild(storyCard);
 
     // Attach click handlers
-    const choiceBtns = contentDiv.querySelectorAll('.story-choice-btn');
-    choiceBtns.forEach(btn => {
-      btn.addEventListener('click', () => this.handleChoice(btn.dataset.chapter));
+    const choiceBtns = contentDiv.querySelectorAll(".story-choice-btn");
+    choiceBtns.forEach((btn) => {
+      btn.addEventListener("click", () => this.handleChoice(btn.dataset.chapter));
     });
 
     // Scroll to story
     setTimeout(() => {
-      document.getElementById('story')?.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'center'
+      document.getElementById("story")?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
       });
     }, 100);
   }
 
   async handleChoice(chapter) {
     // Special cases
-    if (chapter === 'chat') {
-      document.getElementById('chat-toggle-btn')?.click();
+    if (chapter === "chat") {
+      document.getElementById("chat-toggle-btn")?.click();
       return;
     }
 
-    if (chapter === 'work') {
-      document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
+    if (chapter === "work") {
+      document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
       return;
     }
 
     this.currentChapter = chapter;
     this.storyHistory.push(chapter);
     this.updateProgress(this.storyHistory.length + 1);
-    
+
     // Try to load from API
     await this.loadFromAPI(chapter);
   }
@@ -276,13 +280,13 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
   async loadFromAPI(chapterId) {
     try {
       const response = await fetch(this.apiEndpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           chapterId,
-          userChoice: this.storyHistory[this.storyHistory.length - 1]
+          userChoice: this.storyHistory[this.storyHistory.length - 1],
         }),
       });
 
@@ -291,10 +295,10 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
       if (data.success && data.content) {
         const storyData = {
           content: data.content,
-          choices: (data.nextChoices || []).map(choice => ({
+          choices: (data.nextChoices || []).map((choice) => ({
             text: choice,
-            chapter: 'dynamic'
-          }))
+            chapter: "dynamic",
+          })),
         };
         this.loadStory(storyData);
       } else {
@@ -302,16 +306,16 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
         this.loadInitialStory();
       }
     } catch (error) {
-      console.error('Story API error:', error);
+      console.error("Story API error:", error);
       // Fallback to static story
       this.loadInitialStory();
     }
   }
 
   updateProgress(chapterNum) {
-    const countSpan = document.getElementById('chapter-count');
-    const progressFill = document.querySelector('.progress-fill');
-    
+    const countSpan = document.getElementById("chapter-count");
+    const progressFill = document.querySelector(".progress-fill");
+
     if (countSpan) countSpan.textContent = chapterNum;
     if (progressFill) {
       const percentage = Math.min((chapterNum / 8) * 100, 100);
@@ -321,8 +325,8 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
 }
 
 // Initialize story when DOM is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => new InteractiveStory());
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => new InteractiveStory());
 } else {
   new InteractiveStory();
 }
