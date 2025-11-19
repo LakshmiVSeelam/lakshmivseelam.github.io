@@ -7,7 +7,8 @@ class InteractiveStory {
   constructor() {
     this.currentChapter = "start";
     this.storyHistory = [];
-    this.apiEndpoint = "/api/generate-story";
+    // Update this URL with your actual Vercel deployment URL
+    this.apiEndpoint = "https://lakshmivseelam-portfolio-backend.vercel.app/api/generate-story";
     this.init();
   }
 

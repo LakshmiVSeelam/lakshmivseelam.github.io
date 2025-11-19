@@ -7,7 +7,8 @@ class AIChatWidget {
   constructor() {
     this.isOpen = false;
     this.conversationHistory = [];
-    this.apiEndpoint = "/api/chat";
+    // Update this URL with your actual Vercel deployment URL
+    this.apiEndpoint = "https://lakshmivseelam-portfolio-backend.vercel.app/api/chat";
     this.init();
   }
 
