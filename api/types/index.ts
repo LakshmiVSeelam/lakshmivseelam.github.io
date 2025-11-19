@@ -1,5 +1,5 @@
 // API Request/Response Types
-
+//
 export interface ChatRequest {
   message: string;
   conversationHistory?: Array<{
