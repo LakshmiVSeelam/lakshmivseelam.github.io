@@ -1,0 +1,295 @@
+/**
+ * Interactive Story Styles
+ * Modern, animated storytelling interface
+ */
+
+/* Story Section */
+.story-sec {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.story-sec::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.story-header {
+  position: relative;
+  z-index: 1;
+}
+
+.story-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Story Content */
+.story-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Story Card */
+.story-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Story Text */
+.story-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.story-text strong {
+  color: #fff;
+  font-weight: 600;
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.story-text em {
+  color: #a78bfa;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.story-text br + br {
+  display: block;
+  content: "";
+  margin-top: 16px;
+}
+
+/* Story Choices */
+.story-choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.story-choice-btn {
+  padding: 16px 24px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  border: 2px solid rgba(102, 126, 234, 0.4);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+}
+
+.story-choice-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.story-choice-btn:hover {
+  transform: translateY(-4px);
+  border-color: #667eea;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+}
+
+.story-choice-btn:hover::before {
+  opacity: 1;
+}
+
+.story-choice-btn:active {
+  transform: translateY(-2px);
+}
+
+.story-choice-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Story Loader */
+.story-loader {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.loader-spinner {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 20px;
+  border: 4px solid rgba(102, 126, 234, 0.2);
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.story-loader p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Story Progress */
+.story-progress {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.progress-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.progress-text span {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .story-card {
+    padding: 24px;
+  }
+
+  .story-text {
+    font-size: 1rem;
+  }
+
+  .story-text strong {
+    font-size: 1.2rem;
+  }
+
+  .story-choices {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .story-choice-btn {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-sec {
+    padding: 20px 0;
+  }
+
+  .story-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .story-subtitle {
+    font-size: 1rem;
+  }
+
+  .story-card {
+    padding: 20px;
+  }
+
+  .story-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Animations for page load */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.story-header {
+  animation: slideUp 0.6s ease-out;
+}
+
+.story-content {
+  animation: slideUp 0.6s ease-out 0.2s both;
+}
+
+.story-progress {
+  animation: slideUp 0.6s ease-out 0.4s both;
+}
