@@ -1,104 +1,116 @@
 /* @import './node_modules/bootstrap/dist/css/bootstrap.min.css'; */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #000;
-    font-weight: lighter;
-    color: #fff;
+  font-family: "Quicksand", sans-serif;
+  background-color: #000;
+  font-weight: lighter;
+  color: #fff;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
-    font-weight: lighter;
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
 }
 
-.logo-side-bar{
-    position: fixed;
-    /* background-color: #ccc; */
-    top:0;
-    bottom: 0;
-    display: flex;
-    margin-left:-3.5rem;
-    z-index: 1;
-    transition: all ease-in 0.5s;
+.logo-side-bar {
+  position: fixed;
+  /* background-color: #ccc; */
+  top: 0;
+  bottom: 0;
+  display: flex;
+  margin-left: -3.5rem;
+  z-index: 1;
+  transition: all ease-in 0.5s;
 }
 
-.logo{
-    text-wrap: wrap;
-    font-family: "Archivo Black", sans-serif;
-    writing-mode: tb;
-    text-orientation: upright;
-    font-size: 8.5rem;
-    margin: auto auto;
-    font-weight: bolder;
-    letter-spacing: 2rem;
-    text-indent: -5rem;
-    z-index: -1;
-    pointer-events: none;
-    transition: all ease-in 0.5s;
-    color: #fff;
-    opacity: 0.03;
+.logo {
+  text-wrap: wrap;
+  font-family: "Archivo Black", sans-serif;
+  writing-mode: tb;
+  text-orientation: upright;
+  font-size: 8.5rem;
+  margin: auto auto;
+  font-weight: bolder;
+  letter-spacing: 2rem;
+  text-indent: -5rem;
+  z-index: -1;
+  pointer-events: none;
+  transition: all ease-in 0.5s;
+  color: #fff;
+  opacity: 0.03;
 }
 
-.home-styling{
-    opacity: 0.7;
+.home-styling {
+  opacity: 0.7;
 }
 
-.home-spacing{
-    margin-left: 0px;
+.home-spacing {
+  margin-left: 0px;
 }
 
-.main-content{
-    /* padding-left:6rem; */
-    /* background-color: #000; */
-    /* z-index: 9; */
+.main-content {
+  /* padding-left:6rem; */
+  /* background-color: #000; */
+  /* z-index: 9; */
 }
 
-.menu{
-    margin-left: -5rem;
+.menu {
+  margin-left: -5rem;
 }
 
 .menu a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.menu a.active{
-    font-size: 20px;
+.menu a.active {
+  font-size: 20px;
 }
 
-.menu a.active::after{
-    content: ' />';
-    font-size: 18px;
+.menu a.active::after {
+  content: " />";
+  font-size: 18px;
 }
 
-.menu a.active::before{
-    content: '< ';
-    font-size: 18px;
+.menu a.active::before {
+  content: "< ";
+  font-size: 18px;
 }
 
-.sec{
-    height: 100vh;
-    /* padding-left: 6rem; */
+.sec {
+  height: 100vh;
+  /* padding-left: 6rem; */
 }
 
-.sec-title{
-    padding:2rem 0;
+.sec-title {
+  padding: 2rem 0;
 }
 
 /* home section */
-.home-sec{
-    /* background: url('../../assets/img/testpic.jpg') no-repeat; */
-    background-size: contain;
-    /* background-color: #000; */
-    color: #fff;
+.home-sec {
+  /* background: url('../../assets/img/testpic.jpg') no-repeat; */
+  background-size: contain;
+  /* background-color: #000; */
+  color: #fff;
 }
 
 /* about section */
-.about-sec, .work-sec, .contact-sec{
-    padding-left: 10rem;
+.about-sec,
+.work-sec,
+.contact-sec {
+  padding-left: 10rem;
 }
 
 /* .about-sec{
@@ -116,72 +128,198 @@ body {
     color: #fff;
 } */
 
-.mail-text{
-    text-decoration: none;
+.mail-text {
+  text-decoration: none;
 }
 
-.contact-bg{
-    background-color: rgba(0,0,0,0.5);
+.contact-bg {
+  background-color: rgba(0, 0, 0, 0.5);
 }
-
 
 /* mobile  */
 @media (max-width: 768px) {
-    .menu{
-        margin-left: 0;
-        background: rgba(0,0,0,0.7);
-        text-align: center;
-        align-items: center !important;
-    }
-    .navbar-toggler{
-        align-self: self-start;
-    }
-    .sec{
-        padding-top: 20px;
-    }
-    .home-sec{
-        background: none;
-    }
-    .logo-side-bar{
-        bottom: auto;
-        right: 0;
-        left: 0;
-        display: block;
-    }
-    .mobile-logo{
-        font-size: 2rem;
-        font-family: "Archivo Black", sans-serif;
-        opacity: 0.7;
-    }
-    .logo{
-        font-size: 4rem;
-        letter-spacing: -2rem;
-    }
-    .about-sec, .work-sec, .contact-sec{
-        padding: 20px 45px;
-    }
-    .contact-sec .border-end{
-        border-right: 0!important;
-    }
+  /* Navigation improvements */
+  .menu {
+    margin-left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    text-align: center;
+    align-items: center !important;
+    width: 100%;
+    z-index: 1000;
+  }
 
-    .contact-sec .h3{
-        font-size: 20px;
-    }
+  .navbar-toggler {
+    align-self: self-start;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 0.75rem;
+    margin: 1rem;
+  }
 
-    .work-sec .carousel{
-        padding: 0px;
-        margin:0px
-    }
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  }
 
-    .work-sec .project-title{
-        display: none
-    }
+  .navbar-collapse {
+    padding: 1rem 0;
+  }
 
-    .work-sec .proj-desc{
-        font-size: 16px;
-    }
+  .menu .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+  }
 
-    .work-sec img{
-        width: 50%!important;
-    }
+  /* Section improvements */
+  .sec {
+    padding-top: 60px;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .home-sec {
+    background: none;
+    padding: 2rem 1rem;
+  }
+
+  .home-sec .display-1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  /* Logo sidebar */
+  .logo-side-bar {
+    bottom: auto;
+    right: 0;
+    left: 0;
+    display: block;
+    margin-left: 0;
+    position: fixed;
+    z-index: 999;
+  }
+
+  .mobile-logo {
+    font-size: 2rem;
+    font-family: "Archivo Black", sans-serif;
+    opacity: 0.7;
+  }
+
+  .logo {
+    font-size: 4rem;
+    letter-spacing: -2rem;
+  }
+
+  /* About section */
+  .about-sec {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-sec h4 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .sec-title {
+    font-size: 1.75rem;
+    padding: 1rem 0;
+  }
+
+  /* Work section improvements */
+  .work-sec {
+    padding: 2rem 1rem;
+  }
+
+  .work-sec .carousel {
+    padding: 0;
+    margin: 0;
+  }
+
+  .work-sec .carousel-inner {
+    padding: 1rem 0;
+  }
+
+  .work-sec .project-title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .work-sec .proj-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .work-sec img {
+    width: 60% !important;
+    margin-bottom: 1rem;
+  }
+
+  /* Carousel controls - larger touch targets */
+  .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+  }
+
+  /* Contact section improvements */
+  .contact-sec {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-sec .border-end {
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-sec .h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    word-break: break-word;
+  }
+
+  .contact-sec .display-3 {
+    font-size: 2.5rem;
+  }
+
+  /* Better touch targets for links */
+  .contact-sec a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* AI Chat widget mobile optimization */
+  .chat-toggle-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .ai-chat-container {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-sec,
+  .work-sec,
+  .contact-sec {
+    padding-left: 6rem;
+  }
+
+  .sec-title {
+    font-size: 2rem;
+  }
+
+  .work-sec .project-title {
+    font-size: 1.5rem;
+  }
 }
