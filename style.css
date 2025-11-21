@@ -3,6 +3,55 @@
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 
+/* Accessibility: Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #667eea;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 10000;
+  font-weight: 600;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #ffd700;
+  outline-offset: 2px;
+}
+
+/* Accessibility: Visually hidden but screen reader accessible */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Accessibility: Improved focus states */
+a:focus,
+button:focus,
+.nav-link:focus,
+.btn:focus {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Accessibility: Better contrast for interactive elements */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ffd700;
+  outline-offset: 2px;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   background-color: #000;
@@ -98,6 +147,11 @@ h6 {
   background-size: contain;
   /* background-color: #000; */
   color: #fff;
+}
+
+/* Accessibility: Improved contrast for about section list */
+.about-sec ul li {
+  color: #f0f0f0;
 }
 
 /* about section */

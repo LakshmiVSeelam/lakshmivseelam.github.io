@@ -55,17 +55,25 @@
     </style>
   </head>
   <body class="overflow-hidden">
-    <div class="" id="loader">
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="loader" role="status" aria-live="polite" aria-label="Loading portfolio">
       <div
         class="loader position-fixed w-100 h-100 bg-dark text-white z-3 d-flex align-items-center justify-content-center"
       >
-        <i class="fa-solid fa-spinner fa-spin-pulse display-1"></i>
+        <i class="fa-solid fa-spinner fa-spin-pulse display-1" aria-hidden="true"></i>
+        <span class="visually-hidden">Loading content, please wait...</span>
       </div>
     </div>
     <!-- side name container starts -->
     <div class="logo-side-bar home-spacing">
-      <h1 class="logo home-styling d-none d-sm-block">LAKSHMI</h1>
-      <nav class="navbar navbar-expand-lg flex-column align-items-start menu" id="navbar-scrollspy">
+      <h1 class="logo home-styling d-none d-sm-block" aria-label="Lakshmi Seelam Portfolio">LAKSHMI</h1>
+      <nav
+        class="navbar navbar-expand-lg flex-column align-items-start menu"
+        id="navbar-scrollspy"
+        aria-label="Main navigation"
+      >
         <button
           class="navbar-toggler"
           type="button"
@@ -101,40 +109,58 @@
     <!-- side name container end -->
 
     <!-- website content starts -->
-    <div
+    <main
+      id="main-content"
       class="main-content"
       data-bs-spy="scroll"
       data-bs-target="#navbar-scrollspy"
       data-bs-smoothscroll="true"
       data-bs-offset="0"
+      role="main"
     >
-      <section class="sec home-sec d-flex flex-column justify-content-center align-items-center" id="home">
-        <div class="">
-          <h1 class="display-1 text-white opacity-75">Innovative.</h1>
-          <h1 class="display-1 text-white opacity-75">Modern.</h1>
-          <h1 class="display-1 text-white opacity-75">Passionate.</h1>
+      <section
+        class="sec home-sec d-flex flex-column justify-content-center align-items-center"
+        id="home"
+        aria-labelledby="home-heading"
+      >
+        <div>
+          <h2 id="home-heading" class="visually-hidden">Welcome to my portfolio</h2>
+          <p class="display-1 text-white" style="opacity: 0.85">Innovative.</p>
+          <p class="display-1 text-white" style="opacity: 0.85">Modern.</p>
+          <p class="display-1 text-white" style="opacity: 0.85">Passionate.</p>
         </div>
         <div class="mt-5">
-          <a href="#about" class="text-white"><i class="fa-solid fa-angle-down fa-bounce display-6"></i></a>
+          <a href="#about" class="text-white" aria-label="Scroll down to About section">
+            <i class="fa-solid fa-angle-down fa-bounce display-6" aria-hidden="true"></i>
+          </a>
         </div>
       </section>
-      <section class="sec about-sec" id="about">
+      <section class="sec about-sec" id="about" aria-labelledby="about-heading">
         <div class="d-flex flex-column h-100 justify-content-center">
-          <h1 class="sec-title">Meet Me: The Woman Behind the Code</h1>
-          <h4>Over 10 years of experience</h4>
-          <h4>Possessing notable skills</h4>
-          <h4>I have been part of emerging businesses, growing ventures, and multinational corporations.</h4>
-          <h4>Aiding small businesses in developing their online platforms.</h4>
-          <h4>Proficient in handling websites and mobile applications of varying scales.</h4>
-          <h4>Addicted to clean code and coffee. <i class="fa-solid fa-mug-hot fa-beat-fade"></i></h4>
+          <h2 id="about-heading" class="sec-title">Meet Me: The Woman Behind the Code</h2>
+          <ul class="list-unstyled" style="font-size: 1.5rem; line-height: 2">
+            <li>Over 10 years of experience</li>
+            <li>Possessing notable skills</li>
+            <li>I have been part of emerging businesses, growing ventures, and multinational corporations</li>
+            <li>Aiding small businesses in developing their online platforms</li>
+            <li>Proficient in handling websites and mobile applications of varying scales</li>
+            <li>
+              Addicted to clean code and coffee <i class="fa-solid fa-mug-hot fa-beat-fade" aria-hidden="true"></i>
+            </li>
+          </ul>
         </div>
       </section>
-      <section class="sec work-sec" id="work">
+      <section class="sec work-sec" id="work" aria-labelledby="work-heading">
         <div class="d-flex flex-column h-100 justify-content-center">
-          <h1 class="sec-title">My Work, My Pride</h1>
+          <h2 id="work-heading" class="sec-title">My Work, My Pride</h2>
           <div class="container col-12 px-sm-4 px-0 py-2 position-relative">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-              <div id="workCarousel" class="carousel slide d-flex flex-column">
+              <div
+                id="workCarousel"
+                class="carousel slide d-flex flex-column"
+                role="region"
+                aria-label="Portfolio projects carousel"
+              >
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <div class="row align-items-center">
@@ -327,13 +353,13 @@
           </div>
         </div>
       </section>
-      <section class="sec contact-sec" id="contact">
+      <section class="sec contact-sec" id="contact" aria-labelledby="contact-heading">
         <div class="d-flex flex-column h-100 justify-content-center">
-          <h1 class="sec-title">
+          <h2 id="contact-heading" class="sec-title">
             Reach Out <br />
             I'm a Good Listener !!!
-          </h1>
-          <div class="container py-5">
+          </h2>
+          <div class="container py-5" role="contentinfo">
             <div class="row">
               <div class="col-12 col-sm-6 align-items-sm-end d-flex flex-column pe-sm-5 border-end mb-3 mb-sm-0">
                 <div
@@ -342,15 +368,18 @@
                   <a
                     href="mailto:lakshmivseelam@gmail.com"
                     class="m-0 d-flex h3 align-items-center mail-text flex-row-sm-reverse text-break"
+                    aria-label="Email Lakshmi at lakshmivseelam@gmail.com"
                   >
-                    <i class="fa-solid fa-envelope mx-1 mx-sm-3"></i>
+                    <i class="fa-solid fa-envelope mx-1 mx-sm-3" aria-hidden="true"></i>
                     <span class="text-center text-sm-end">lakshmivseelam@gmail.com</span>
                   </a>
                 </div>
                 <div
-                  class="d-flex h3 align-items-center mb-3 mb-sm-2 flex-row-sm-reverse flex-wrap justify-content-center justify-content-sm-end"
+                  class="d-flex h3 align-items-center mb-3 mb-sm-2 flex-wrap justify-content-center justify-content-sm-end"
+                  role="group"
+                  aria-label="Phone numbers"
                 >
-                  <i class="fa-solid fa-mobile-screen-button mx-1 mx-sm-3"></i>
+                  <i class="fa-solid fa-mobile-screen-button mx-1 mx-sm-3" aria-hidden="true"></i>
                   <span class="text-center text-sm-end">
                     <a href="tel:+919029272122" class="text-white text-decoration-none">(+91) 9029272122</a>
                     <span class="d-none d-sm-inline"> / </span>
@@ -360,9 +389,11 @@
                   </span>
                 </div>
                 <div
-                  class="d-flex h3 align-items-center flex-row-sm-reverse justify-content-center justify-content-sm-end"
+                  class="d-flex h3 align-items-center justify-content-center justify-content-sm-end"
+                  role="group"
+                  aria-label="Location"
                 >
-                  <i class="fa-solid fa-location-dot mx-1 mx-sm-3"></i>
+                  <i class="fa-solid fa-location-dot mx-1 mx-sm-3" aria-hidden="true"></i>
                   <span>Hyderabad, India</span>
                 </div>
               </div>
@@ -395,7 +426,7 @@
         </div>
       </section>
       <!-- website content end -->
-    </div>
+    </main>
 
     <!-- Performance: Load scripts efficiently -->
     <!-- jQuery: Required for existing code -->
