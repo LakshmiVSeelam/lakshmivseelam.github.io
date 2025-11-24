@@ -221,7 +221,7 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
     `;
 
     // Simulate loading for smooth UX
-    await new Promise((resolve) => setTimeout(resolve, 800));
+    await new Promise((resolve) => setTimeout(resolve, 600));
 
     // Create story card
     const storyCard = document.createElement("div");
@@ -245,6 +245,9 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
 
     contentDiv.innerHTML = "";
     contentDiv.appendChild(storyCard);
+
+    // Scroll to top of content area after loading
+    contentDiv.scrollTop = 0;
 
     // Attach click handlers
     const choiceBtns = contentDiv.querySelectorAll(".story-choice-btn");
