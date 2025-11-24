@@ -137,7 +137,7 @@ class AIChatWidget {
   showWelcomeMessage() {
     setTimeout(() => {
       this.addMessage(
-        `Hi! Welcome to TalkToMyProfile 👋\n\nI can answer questions about Lakshmi's experience, skills, projects, and more. What would you like to know?`,
+        `Hey there! 👋 I'm Lakshmi's friend who knows her inside out!\n\nI can tell you all about her amazing journey - from her 10+ years crushing it in tech, to those late-night coding sessions with coffee ☕, to the cool projects she's built. Ask me anything!`,
         "assistant",
         false
       );
@@ -219,22 +219,22 @@ class AIChatWidget {
 
     // Experience questions
     if (lowerMessage.includes("experience") || lowerMessage.includes("years")) {
-      return "I have 10+ years of professional experience as a Full-Stack Developer. I've worked on 50+ projects ranging from startups to Fortune 500 companies, building scalable solutions with React, Angular, Node.js, and cloud technologies.";
+      return "Oh man, Lakshmi's been crushing it in tech for 10+ years! 🚀 She's worked on 50+ projects - everything from exciting startup adventures to big Fortune 500 companies. The cool thing is she's built some seriously scalable stuff with React, Angular, Node.js, and cloud tech. Plus, she's not just coding - she's leading teams and mentoring devs too!";
     }
 
     // Skills questions
     if (lowerMessage.includes("skill") || lowerMessage.includes("technology") || lowerMessage.includes("tech stack")) {
-      return "My core technical skills include:\n\n**Frontend:** React, Angular, Vue.js, JavaScript/TypeScript, HTML5, CSS3\n**Backend:** Node.js, Python, PHP, REST APIs, GraphQL\n**Database & Cloud:** MongoDB, MySQL, PostgreSQL, AWS, Azure, Google Cloud\n**Mobile & Tools:** React Native, Flutter, Git, Docker, CI/CD, Agile\n\nI specialize in full-stack development, scalable architecture, UI/UX design, and leading development teams.";
+      return "Let me tell you about her tech superpowers! 💪\n\n**Frontend:** She's amazing with React, Angular, Vue.js - basically makes beautiful UIs come to life with JavaScript/TypeScript, HTML5, CSS3\n**Backend:** Total pro with Node.js, Python, PHP, REST APIs, GraphQL\n**Database & Cloud:** MongoDB, MySQL, PostgreSQL - and she's super comfortable with AWS, Azure, Google Cloud\n**Mobile & Tools:** React Native, Flutter for mobile apps, plus she knows Git, Docker, CI/CD inside out\n\nWhat I love is how she blends full-stack dev with killer UI/UX design and team leadership. She's the complete package!";
     }
 
     // Project questions
     if (lowerMessage.includes("project") || lowerMessage.includes("work") || lowerMessage.includes("portfolio")) {
-      return "I've delivered several notable projects:\n\n**Ridge Sports Infra:** Modern responsive website with dynamic content management, achieving 95+ PageSpeed score\n\n**Aashri Society NGO:** Angular platform with WCAG 2.1 AA accessibility, donation processing, and multi-language support\n\n**Rotary Club Digital Hub:** Community platform with member portal, event management, and 150% organic traffic increase\n\n**Petswonder E-Commerce:** Scalable platform handling 500+ daily transactions with React, Node.js, and MongoDB\n\nPlus confidential enterprise projects for Fortune 500 companies. Check out the Work section for more details!";
+      return "Okay so you gotta hear about her projects! 🎯\n\n**Ridge Sports Infra:** Built this gorgeous responsive website with 95+ PageSpeed score - it's lightning fast!\n\n**Aashri Society NGO:** She created this Angular platform that's super accessible (WCAG 2.1 AA compliant), handles donations, and works in multiple languages. Making a real difference!\n\n**Rotary Club Digital Hub:** Community platform with member portals, event management - organic traffic shot up by 150%! 📈\n\n**Petswonder E-Commerce:** This one handles 500+ daily transactions smoothly with React, Node.js, and MongoDB\n\nAnd that's just the public stuff - she's also done confidential work for Fortune 500 companies! Scroll down to the Work section to see more cool details!";
     }
 
     // Location questions
     if (lowerMessage.includes("location") || lowerMessage.includes("where") || lowerMessage.includes("based")) {
-      return "I'm based in Hyderabad, India. I'm open to remote work opportunities and can collaborate with teams globally.";
+      return "She's based in Hyderabad, India 🇮🇳 - but honestly, she's totally cool with remote work and loves collaborating with teams from all over the world! Time zones? Not a problem for her.";
     }
 
     // Contact questions
@@ -244,12 +244,12 @@ class AIChatWidget {
       lowerMessage.includes("email") ||
       lowerMessage.includes("phone")
     ) {
-      return "You can reach me at:\n\n📧 Email: lakshmivseelam@gmail.com\n📱 Phone: (+91) 9029272122 / (+91) 9967623013\n💼 LinkedIn: linkedin.com/in/lakshmiseelam\n📍 Location: Hyderabad, India\n\nFeel free to reach out for opportunities, collaborations, or just to chat about tech!";
+      return "Want to connect with her? Here's how! 📬\n\n📧 Email: lakshmivseelam@gmail.com\n📱 Phone: (+91) 9029272122 / (+91) 9967623013\n💼 LinkedIn: linkedin.com/in/lakshmiseelam\n📍 Location: Hyderabad, India\n\nSeriously, just reach out! She's super friendly and loves talking about new opportunities, tech collaborations, or even just geeking out about the latest frameworks ☕";
     }
 
     // Education questions
     if (lowerMessage.includes("education") || lowerMessage.includes("degree") || lowerMessage.includes("study")) {
-      return "I have a strong educational background in Computer Science and have continuously updated my skills through professional certifications and hands-on experience with cutting-edge technologies.";
+      return "She's got a solid Computer Science background and is always leveling up! 📚 What I really admire is how she doesn't just rely on her degree - she's constantly learning, getting certifications, and hands-on with the latest tech. That's how she stays ahead of the curve!";
     }
 
     return null;
@@ -259,15 +259,15 @@ class AIChatWidget {
     const lowerMessage = message.toLowerCase();
 
     if (lowerMessage.includes("hello") || lowerMessage.includes("hi") || lowerMessage.includes("hey")) {
-      return "Hello! 👋 I'm happy to answer questions about my experience, skills, projects, and how I can help with your next development challenge. What would you like to know?";
+      return "Hey! 👋 So great to chat! I'm basically Lakshmi's hype person and I love sharing about her journey - her 10+ years building awesome stuff, the cool projects she's shipped, and how she can totally level up your next dev challenge. What do you wanna know about her?";
     }
 
     if (lowerMessage.includes("hire") || lowerMessage.includes("available") || lowerMessage.includes("opportunity")) {
-      return "Yes, I'm open to new opportunities! With 10+ years of full-stack development experience, I can help with:\n\n• Building scalable web applications\n• Leading development teams\n• Cloud architecture & deployment\n• Mobile app development\n• Technical consulting\n\nLet's discuss your project: lakshmivseelam@gmail.com or (+91) 9029272122";
+      return "Yes! She's definitely open to exciting opportunities! 🎉 With her 10+ years of experience, she's perfect for:\n\n• Building scalable web apps from scratch\n• Leading and mentoring dev teams\n• Cloud architecture & deployment magic\n• Mobile app development\n• Technical consulting\n\nHonestly, just reach out and chat with her directly! Drop an email at lakshmivseelam@gmail.com or call (+91) 9029272122 - she's super approachable!";
     }
 
     // Default response
-    return "I'd be happy to help! I can share information about my:\n\n• 10+ years of full-stack development experience\n• Technical skills (React, Angular, Node.js, Cloud)\n• Portfolio projects\n• Contact information\n\nWhat would you like to know? Or feel free to reach me directly at lakshmivseelam@gmail.com";
+    return "Hey! Great question! 😊 I can tell you all about:\n\n• Her amazing 10+ years journey in full-stack development\n• Tech skills (React, Angular, Node.js, Cloud - she rocks at all of them!)\n• Cool portfolio projects she's built\n• How to get in touch with her\n\nWhat are you curious about? Or hey, just shoot her an email directly at lakshmivseelam@gmail.com - she responds fast!";
   }
 
   addMessage(text, role, isError = false) {
