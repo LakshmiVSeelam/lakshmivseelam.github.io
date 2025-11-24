@@ -154,14 +154,6 @@ h6 {
   color: #f0f0f0;
 }
 
-/* about section */
-.about-sec,
-.skills-sec,
-.work-sec,
-.contact-sec {
-  padding-left: 10rem;
-}
-
 /* Skills Section */
 .skills-sec {
   background-color: #000;
@@ -351,10 +343,6 @@ h6 {
   }
 
   /* About section */
-  .about-sec {
-    padding: 2rem 1.5rem;
-  }
-
   .about-sec h4 {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -367,9 +355,6 @@ h6 {
   }
 
   /* Skills section mobile */
-  .skills-sec {
-    padding: 2rem 1rem;
-  }
 
   .skill-category {
     padding: 1.5rem 1rem;
@@ -411,10 +396,6 @@ h6 {
   }
 
   /* Work section improvements */
-  .work-sec {
-    padding: 2rem 1rem;
-  }
-
   .work-sec .carousel {
     padding: 0;
     margin: 0;
@@ -449,10 +430,6 @@ h6 {
   }
 
   /* Contact section improvements */
-  .contact-sec {
-    padding: 2rem 1.5rem;
-  }
-
   .contact-sec .border-end {
     border-right: 0 !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -496,12 +473,6 @@ h6 {
 
 /* Tablet adjustments */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .about-sec,
-  .work-sec,
-  .contact-sec {
-    padding-left: 6rem;
-  }
-
   .sec-title {
     font-size: 2rem;
   }
