@@ -248,6 +248,33 @@ h6 {
   color: #fff;
 }
 
+/* Work Section */
+.project-logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  padding: 2rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+.project-logo:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.project-title {
+  font-weight: 400;
+}
+
+.proj-desc {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
 /* .about-sec{
     background-color: #444;
     color: #fff;
@@ -416,9 +443,9 @@ h6 {
     line-height: 1.5;
   }
 
-  .work-sec img {
-    width: 60% !important;
-    margin-bottom: 1rem;
+  .project-logo {
+    max-width: 150px;
+    padding: 1.5rem;
   }
 
   /* Carousel controls - larger touch targets */
