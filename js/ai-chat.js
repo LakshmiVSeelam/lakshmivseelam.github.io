@@ -163,6 +163,20 @@ class AIChatWidget {
     // Show typing indicator
     this.showTypingIndicator();
 
+    // Try local knowledge base first
+    const localResponse = this.getLocalResponse(message);
+    if (localResponse) {
+      setTimeout(() => {
+        this.removeTypingIndicator();
+        this.addMessage(localResponse, "assistant");
+        this.conversationHistory.push({
+          role: "assistant",
+          content: localResponse,
+        });
+      }, 800);
+      return;
+    }
+
     try {
       const response = await fetch(this.apiEndpoint, {
         method: "POST",
@@ -187,21 +201,68 @@ class AIChatWidget {
           content: data.reply,
         });
       } else {
-        this.addMessage(
-          `Sorry, I'm having trouble connecting right now. Please try again or reach me at lakshmivseelam@gmail.com`,
-          "assistant",
-          true
-        );
+        // Fallback to local response
+        const fallback = this.getFallbackResponse(message);
+        this.addMessage(fallback, "assistant");
       }
     } catch (error) {
       console.error("Chat error:", error);
       this.removeTypingIndicator();
-      this.addMessage(
-        `Oops! Something went wrong. You can reach me directly at lakshmivseelam@gmail.com or (+91) 9029272122`,
-        "assistant",
-        true
-      );
+      // Use fallback instead of error
+      const fallback = this.getFallbackResponse(message);
+      this.addMessage(fallback, "assistant");
     }
+  }
+
+  getLocalResponse(message) {
+    const lowerMessage = message.toLowerCase();
+    
+    // Experience questions
+    if (lowerMessage.includes('experience') || lowerMessage.includes('years')) {
+      return "I have 10+ years of professional experience as a Full-Stack Developer. I've worked on 50+ projects ranging from startups to Fortune 500 companies, building scalable solutions with React, Angular, Node.js, and cloud technologies.";
+    }
+    
+    // Skills questions
+    if (lowerMessage.includes('skill') || lowerMessage.includes('technology') || lowerMessage.includes('tech stack')) {
+      return "My core technical skills include:\n\n**Frontend:** React, Angular, Vue.js, JavaScript/TypeScript, HTML5, CSS3\n**Backend:** Node.js, Python, PHP, REST APIs, GraphQL\n**Database & Cloud:** MongoDB, MySQL, PostgreSQL, AWS, Azure, Google Cloud\n**Mobile & Tools:** React Native, Flutter, Git, Docker, CI/CD, Agile\n\nI specialize in full-stack development, scalable architecture, UI/UX design, and leading development teams.";
+    }
+    
+    // Project questions
+    if (lowerMessage.includes('project') || lowerMessage.includes('work') || lowerMessage.includes('portfolio')) {
+      return "I've delivered several notable projects:\n\n**Ridge Sports Infra:** Modern responsive website with dynamic content management, achieving 95+ PageSpeed score\n\n**Aashri Society NGO:** Angular platform with WCAG 2.1 AA accessibility, donation processing, and multi-language support\n\n**Rotary Club Digital Hub:** Community platform with member portal, event management, and 150% organic traffic increase\n\n**Petswonder E-Commerce:** Scalable platform handling 500+ daily transactions with React, Node.js, and MongoDB\n\nPlus confidential enterprise projects for Fortune 500 companies. Check out the Work section for more details!";
+    }
+    
+    // Location questions
+    if (lowerMessage.includes('location') || lowerMessage.includes('where') || lowerMessage.includes('based')) {
+      return "I'm based in Hyderabad, India. I'm open to remote work opportunities and can collaborate with teams globally.";
+    }
+    
+    // Contact questions
+    if (lowerMessage.includes('contact') || lowerMessage.includes('reach') || lowerMessage.includes('email') || lowerMessage.includes('phone')) {
+      return "You can reach me at:\n\n📧 Email: lakshmivseelam@gmail.com\n📱 Phone: (+91) 9029272122 / (+91) 9967623013\n💼 LinkedIn: linkedin.com/in/lakshmiseelam\n📍 Location: Hyderabad, India\n\nFeel free to reach out for opportunities, collaborations, or just to chat about tech!";
+    }
+    
+    // Education questions
+    if (lowerMessage.includes('education') || lowerMessage.includes('degree') || lowerMessage.includes('study')) {
+      return "I have a strong educational background in Computer Science and have continuously updated my skills through professional certifications and hands-on experience with cutting-edge technologies.";
+    }
+    
+    return null;
+  }
+
+  getFallbackResponse(message) {
+    const lowerMessage = message.toLowerCase();
+    
+    if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+      return "Hello! 👋 I'm happy to answer questions about my experience, skills, projects, and how I can help with your next development challenge. What would you like to know?";
+    }
+    
+    if (lowerMessage.includes('hire') || lowerMessage.includes('available') || lowerMessage.includes('opportunity')) {
+      return "Yes, I'm open to new opportunities! With 10+ years of full-stack development experience, I can help with:\n\n• Building scalable web applications\n• Leading development teams\n• Cloud architecture & deployment\n• Mobile app development\n• Technical consulting\n\nLet's discuss your project: lakshmivseelam@gmail.com or (+91) 9029272122";
+    }
+    
+    // Default response
+    return "I'd be happy to help! I can share information about my:\n\n• 10+ years of full-stack development experience\n• Technical skills (React, Angular, Node.js, Cloud)\n• Portfolio projects\n• Contact information\n\nWhat would you like to know? Or feel free to reach me directly at lakshmivseelam@gmail.com";
   }
 
   addMessage(text, role, isError = false) {
