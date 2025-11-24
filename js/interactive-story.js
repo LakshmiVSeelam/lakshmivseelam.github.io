@@ -57,7 +57,7 @@ class InteractiveStory {
     }
   }
 
-  async loadInitialStory() {
+  async loadInitialStory(chapter = "start", shouldScroll = false) {
     const staticStories = {
       start: {
         content: `<strong>Welcome, traveler!</strong>
@@ -200,11 +200,14 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
       },
     };
 
-    this.loadStory(staticStories["start"]);
-    this.updateProgress(1);
+    const storyToLoad = staticStories[chapter] || staticStories["start"];
+    this.loadStory(storyToLoad, shouldScroll);
+    if (chapter === "start") {
+      this.updateProgress(1);
+    }
   }
 
-  async loadStory(storyData) {
+  async loadStory(storyData, shouldScroll = false) {
     const contentDiv = document.getElementById("story-content");
 
     if (!contentDiv) return;
@@ -249,13 +252,15 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
       btn.addEventListener("click", () => this.handleChoice(btn.dataset.chapter));
     });
 
-    // Scroll to story
-    setTimeout(() => {
-      document.getElementById("story")?.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }, 100);
+    // Scroll to story only if explicitly requested (not on initial load)
+    if (shouldScroll) {
+      setTimeout(() => {
+        document.getElementById("story")?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }, 100);
+    }
   }
 
   async handleChoice(chapter) {
@@ -274,8 +279,14 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
     this.storyHistory.push(chapter);
     this.updateProgress(this.storyHistory.length + 1);
 
-    // Try to load from API
-    await this.loadFromAPI(chapter);
+    // Check if it's a static story chapter, otherwise try API
+    const staticChapters = ["start", "startup", "enterprise", "technical", "challenge", "growth", "contact"];
+    if (staticChapters.includes(chapter)) {
+      await this.loadInitialStory(chapter, true);
+    } else {
+      // Try to load from API
+      await this.loadFromAPI(chapter);
+    }
   }
 
   async loadFromAPI(chapterId) {
@@ -301,15 +312,15 @@ I'm always excited to hear about new challenges and opportunities. Whether it's 
             chapter: "dynamic",
           })),
         };
-        this.loadStory(storyData);
+        this.loadStory(storyData, true);
       } else {
         // Fallback to loading initial story
-        this.loadInitialStory();
+        this.loadInitialStory("start", true);
       }
     } catch (error) {
       console.error("Story API error:", error);
       // Fallback to static story
-      this.loadInitialStory();
+      this.loadInitialStory("start", true);
     }
   }
 
