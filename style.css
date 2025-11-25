@@ -85,6 +85,28 @@ h6 {
   transition: all ease-in 0.5s;
 }
 
+/* Fixed logo at bottom right */
+.fixed-logo-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.fixed-portfolio-logo {
+  width: 25vw;
+  height: auto;
+  opacity: 0.03;
+  transition: all 0.3s ease;
+  filter: brightness(1);
+}
+
+.fixed-logo-container:hover .fixed-portfolio-logo {
+  opacity: 0.15;
+  transform: scale(1.05);
+}
+
 .logo {
   text-wrap: wrap;
   font-family: "Archivo Black", sans-serif;
@@ -446,6 +468,17 @@ h6 {
   .project-logo {
     max-width: 150px;
     padding: 1.5rem;
+  }
+
+  /* Fixed logo responsive */
+  .fixed-logo-container {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .fixed-portfolio-logo {
+    width: 30vw;
+    opacity: 0.03;
   }
 
   /* Carousel controls - larger touch targets */
