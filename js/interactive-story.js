@@ -60,12 +60,9 @@ class InteractiveStory {
   async loadInitialStory(chapter = "start", shouldScroll = false) {
     const staticStories = {
       start: {
-        content: `<strong>Welcome, traveler!</strong>
-
+        content: `<strong>Welcome !!!</strong>
 It's 2015. I'm sitting in front of my laptop, fingers hovering over the keyboard, heart racing with excitement and a touch of nervousness. This is it – the moment where everything begins.
-
 The tech world sprawls before me like an uncharted territory. Should I dive into the chaotic energy of startups where every day brings new challenges? Or explore the structured world of enterprise, where scale and impact reach millions?
-
 <em>Every choice shapes a different story. Where should we begin?</em>`,
         choices: [
           { text: "🚀 The Startup Adventure", chapter: "startup" },
@@ -75,13 +72,9 @@ The tech world sprawls before me like an uncharted territory. Should I dive into
       },
       startup: {
         content: `<strong>Chapter: The Startup Hustle</strong>
-
 Ridge Sports Infra. Just a name on paper when I joined, but a vision that made my eyes light up. "Build our entire digital presence from scratch," they said. No templates. No shortcuts. Pure creation.
-
 I remember my first all-nighter – coffee at 2 AM, debugging CSS at 4 AM, and that magical moment at 6 AM when everything finally clicked. The sunrise had never looked more beautiful.
-
 Launch day was pure adrenaline. We went live. Traffic started pouring in. Clients reached out. We weren't just a website anymore – we were a <em>platform</em>.
-
 The fast-paced chaos taught me more than any textbook ever could. Every bug was a lesson. Every feature request was an opportunity. Every client feedback was gold.`,
         choices: [
           { text: "🛠️ What tech stack did you use?", chapter: "technical" },
@@ -91,13 +84,9 @@ The fast-paced chaos taught me more than any textbook ever could. Every bug was 
       },
       enterprise: {
         content: `<strong>Chapter: Enterprise at Scale</strong>
-
 Fortune 500 companies. Millions of users. Systems that can't afford to fail. This was a different beast entirely.
-
 I learned that "scale" isn't just about handling traffic – it's about handling complexity. It's about building systems where a single line of code impacts thousands of users. Where performance isn't just nice-to-have; it's mission-critical.
-
 Team collaboration at this level? Mind-blowing. Morning standups with teams across three continents. Code reviews that felt like masterclasses. Deployment pipelines so sophisticated they could deploy to production without breaking a sweat.
-
 The pressure was intense, but so was the learning curve. I discovered that enterprise development isn't about moving fast – it's about moving <em>right</em>.`,
         choices: [
           { text: "🎯 What were the biggest challenges?", chapter: "challenge" },
@@ -107,17 +96,11 @@ The pressure was intense, but so was the learning curve. I discovered that enter
       },
       technical: {
         content: `<strong>Chapter: The Tech Stack Chronicles</strong>
-
 Let me take you behind the scenes of my technical arsenal.
-
 <strong>Frontend Magic:</strong> React became my canvas. Every component a brushstroke. Every state management decision a strategic move. TypeScript added the safety net that let me code fearlessly.
-
 <strong>Backend Power:</strong> Node.js for when speed matters. Python for when elegance matters. Both for when everything matters. RESTful APIs that felt more like conversations than contracts.
-
 <strong>Database Decisions:</strong> MongoDB for flexibility. PostgreSQL for reliability. Redis for that lightning-fast performance that makes users smile.
-
 <strong>The Cloud:</strong> AWS taught me infrastructure. Docker taught me consistency. CI/CD taught me confidence.
-
 But here's the secret – technology is just a tool. The real magic? Knowing which tool to use when, and why.`,
         choices: [
           { text: "🚀 Show me a project", chapter: "startup" },
@@ -127,19 +110,14 @@ But here's the secret – technology is just a tool. The real magic? Knowing whi
       },
       challenge: {
         content: `<strong>Chapter: The 3 AM Debugging Session</strong>
-
 Picture this: Production is down. Users are calling. The clock shows 3 AM. And I'm staring at error logs that make absolutely no sense.
-
 This was the Ridge Sports platform. We'd just launched a major feature. Everything worked perfectly in testing. Until it didn't.
-
 <em>The bug:</em> Random timeouts. No pattern. No consistency. Just chaos.
-
 <strong>Hour 1:</strong> Check the obvious. Restart services. Clear caches. Nothing.
 <strong>Hour 2:</strong> Dive into logs. Millions of lines. Start pattern matching.
 <strong>Hour 3:</strong> Find it. A race condition so subtle, it only appeared under specific load patterns.
 <strong>Hour 4:</strong> Fix implemented. Tests written. Deployed.
 <strong>Hour 5:</strong> Monitoring. Holding breath. And... success.
-
 That sunrise coffee never tasted better. The lesson? Sometimes the hardest bugs teach you the most valuable lessons about system design.`,
         choices: [
           { text: "📚 What did you learn?", chapter: "growth" },
@@ -149,25 +127,18 @@ That sunrise coffee never tasted better. The lesson? Sometimes the hardest bugs 
       },
       growth: {
         content: `<strong>Chapter: Evolution of a Developer</strong>
-
 Ten years. Hundreds of projects. Thousands of commits. Millions of lines of code.
-
 <strong>Year 0-2:</strong> The Eager Learner
 "I can build anything!" (Spoiler: I couldn't, but the confidence was cute)
 Learning syntax. Breaking things. Fixing things. Repeat.
-
 <strong>Year 3-5:</strong> The Problem Solver
 Wait, it's not about the code? It's about solving problems?
 Understanding users. Business logic. Architecture decisions.
-
 <strong>Year 6-8:</strong> The Mentor
 Teaching juniors. Code reviews. Discovering that explaining code makes you understand it better.
-
 <strong>Year 9-10+:</strong> The Architect
 Seeing the big picture. System design. Scalability. Long-term thinking.
-
 But here's what I've really learned: <em>The best developers never stop being students.</em>
-
 Every project teaches something new. Every bug is a lesson. Every code review is an opportunity to grow.`,
         choices: [
           { text: "💼 Let's talk opportunities", chapter: "contact" },
@@ -177,20 +148,16 @@ Every project teaches something new. Every bug is a lesson. Every code review is
       },
       contact: {
         content: `<strong>Ready to Connect?</strong>
-
 Thank you for journeying through my story! I hope you got a sense of my passion for building great software and solving complex problems.
-
 <strong>Let's talk about:</strong>
 • Your next big project
 • Technical challenges you're facing
 • Opportunities for collaboration
 • Or just tech in general!
-
 <strong>Reach me at:</strong>
 📧 lakshmivseelam@gmail.com
 📱 (+91) 9029272122
 📍 Hyderabad, India
-
 I'm always excited to hear about new challenges and opportunities. Whether it's a startup that needs to move fast or an enterprise that needs to scale smart, let's build something amazing together!`,
         choices: [
           { text: "💬 Chat with AI Me", chapter: "chat" },
