@@ -293,16 +293,6 @@ After deployment:
 
 ---
 
-## ✨ You're All Set!
-
-Your AI-powered portfolio is now live! 🎉
-
-**Share it:**
-
-- LinkedIn
-- GitHub profile
-- Job applications
-- Twitter/X
 
 **Your deployed URLs:**
 
