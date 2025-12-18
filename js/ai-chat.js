@@ -137,7 +137,7 @@ class AIChatWidget {
   showWelcomeMessage() {
     setTimeout(() => {
       this.addMessage(
-        `Hey there! 👋 I'm Lakshmi's friend who knows her inside out!\n\nI can tell you all about her amazing journey - from her 10+ years crushing it in tech, to those late-night coding sessions with coffee ☕, to the cool projects she's built. Ask me anything!`,
+        `Hey there! 👋 I'm Lakshmi!\n\nI can tell you all about my amazing journey - from my 10+ years crushing it in tech, to those late-night coding sessions with coffee ☕, to the cool projects I built. Ask me anything!`,
         "assistant",
         false
       );
