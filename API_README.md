@@ -286,7 +286,6 @@ MIT - feel free to use this as a template for your own portfolio!
 
 - Email: lakshmivseelam@gmail.com
 - Phone: (+91) 9029272122
-- Website: [Your Vercel URL]
 
 ---
 
